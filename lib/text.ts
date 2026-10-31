@@ -43,7 +43,7 @@ export function cleanText(raw: string): string {
  */
 export function truncateToLimit(
   text: string,
-  maxChars = LIMITS.MAX_SOURCE_CHARS
+  maxChars: number = LIMITS.MAX_SOURCE_CHARS
 ): { text: string; truncated: boolean } {
   if (text.length > maxChars) {
     return {
