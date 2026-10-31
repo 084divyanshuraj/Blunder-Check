@@ -1,4 +1,5 @@
-import { GoogleGenAI } from "@google/genai";
+import { z } from "zod";
+import { generateJson } from "../lib/gemini";
 
 if (typeof process.loadEnvFile === "function") {
   try {
@@ -13,35 +14,26 @@ if (typeof process.loadEnvFile === "function") {
   }
 }
 
-const apiKey = process.env.GEMINI_API_KEY;
-const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
-
-if (!apiKey) {
-  console.error("Missing GEMINI_API_KEY in .env");
-  process.exit(1);
-}
+const smokeSchema = z.object({
+  status: z.enum(["ok", "failed"]),
+  message: z.string(),
+});
 
 async function smokeTest() {
-  console.log(`Testing Gemini API with model: ${model}...`);
-  const ai = new GoogleGenAI({ apiKey });
+  const model = process.env.GEMINI_MODEL || "gemini-3.8-flash";
+  console.log(`Testing generateJson via lib/gemini.ts with model: ${model}...`);
 
   try {
-    const response = await ai.models.generateContent({
-      model,
-      contents: "Return a valid JSON object with a single key 'status' set to 'ok' and 'message' set to 'Gemini API is working'.",
-      config: {
-        responseMimeType: "application/json",
-      },
+    const result = await generateJson({
+      user: "Return a valid JSON object with status 'ok' and message 'Gemini API is working via lib/gemini'.",
+      schema: smokeSchema,
     });
 
-    const text = response.text;
-    console.log("Response text:", text);
-    const parsed = JSON.parse(text ?? "{}");
-    console.log("Parsed JSON:", JSON.stringify(parsed, null, 2));
-    if (parsed.status === "ok") {
-      console.log("SUCCESS: Gemini smoke test passed!");
+    console.log("Structured result:", result);
+    if (result.status === "ok") {
+      console.log("SUCCESS: generateJson smoke test passed!");
     } else {
-      console.warn("Unexpected output:", parsed);
+      console.warn("Unexpected status:", result);
     }
   } catch (err: unknown) {
     console.error("Gemini smoke test failed:", err);
@@ -50,3 +42,4 @@ async function smokeTest() {
 }
 
 smokeTest();
+
