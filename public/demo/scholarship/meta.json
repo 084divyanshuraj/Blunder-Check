@@ -1,0 +1,13 @@
+{
+  "id": "scholarship",
+  "label": "Scholarship application (synthetic sample)",
+  "question": "What should I verify before applying for the Aurora Merit Scholarship 2026-27?",
+  "goal": "Apply successfully for the scholarship without missing a deadline or a required document.",
+  "synthetic": true,
+  "sources": [
+    { "id": "s1", "kind": "paste", "title": "Aurora Foundation: official scholarship page", "file": "s1-official-page.txt" },
+    { "id": "s2", "kind": "paste", "title": "Riverbend University: Student Affairs blog", "file": "s2-university-blog.txt" },
+    { "id": "s3", "kind": "paste", "title": "ScholarHub: scholarship listing", "file": "s3-scholarhub-listing.txt" },
+    { "id": "s4", "kind": "pdf", "title": "Aurora Foundation: Notice AMS/2026/07 (PDF)", "file": "s4-foundation-notice.txt" }
+  ]
+}

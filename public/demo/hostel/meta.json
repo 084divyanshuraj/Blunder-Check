@@ -1,0 +1,12 @@
+{
+  "id": "hostel",
+  "label": "College hostel allotment (synthetic sample)",
+  "question": "What should I verify before paying for a hostel room at Northfield Institute for 2026-27?",
+  "goal": "Secure a hostel room and avoid paying the wrong amount or submitting the wrong documents.",
+  "synthetic": true,
+  "sources": [
+    { "id": "s1", "kind": "paste", "title": "Northfield Institute: hostel allotment page", "file": "s1-hostel-official.txt" },
+    { "id": "s2", "kind": "paste", "title": "Northfield Students Forum: hostel FAQ", "file": "s2-student-forum.txt" },
+    { "id": "s3", "kind": "pdf", "title": "Northfield Institute: Student Handbook 2025-26 (PDF)", "file": "s3-old-handbook.txt" }
+  ]
+}
