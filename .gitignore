@@ -44,6 +44,10 @@ blunder-check-pack/
 # vercel
 .vercel
 
+# media recordings
+public/recordings/
+*.webm
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
