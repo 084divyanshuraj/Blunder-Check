@@ -3,6 +3,7 @@
 import React from "react";
 import type { Blunder, EvidenceRef, SourceRecord } from "@/schemas";
 import { EvidenceStatus } from "../common/EvidenceStatus";
+import { classifySourceProvenance, detectAuthorityMismatch } from "@/lib/provenance";
 
 interface BlunderCardProps {
   blunder: Blunder;
@@ -17,6 +18,22 @@ export function BlunderCard({
 }: BlunderCardProps) {
   const isConflict = blunder.type === "conflict";
   const sourceMap = new Map(sources.map((s) => [s.id, s]));
+
+  // Calculate provenance of cited sources in this blunder
+  const citedTiers = blunder.evidence.map((ev) => {
+    const s = sourceMap.get(ev.sourceId);
+    return s
+      ? classifySourceProvenance(s)
+      : {
+          tier: 2 as const,
+          label: "Unknown",
+          badge: "Source",
+          color: "text-[#8E95A5]",
+          rationale: "",
+        };
+  });
+
+  const mismatch = detectAuthorityMismatch(citedTiers);
 
   return (
     <div className="bg-[#151722] rounded-xl p-5 border border-[#EF4444]/35 hover:border-[#EF4444]/60 transition-all shadow-md space-y-4">
@@ -47,6 +64,16 @@ export function BlunderCard({
         {blunder.description}
       </p>
 
+      {/* Authority Mismatch Alert */}
+      {mismatch.hasMismatch && (
+        <div className="p-3 rounded-lg bg-[#F59E0B]/10 border border-[#F59E0B]/30 text-xs font-mono text-[#F59E0B] flex items-start gap-2">
+          <span className="text-base leading-none">⚡</span>
+          <div>
+            <span className="font-bold">Authority Asymmetry Alert:</span> {mismatch.detail}
+          </div>
+        </div>
+      )}
+
       {/* Evidence Side-by-Side Grid */}
       <div className="pt-2 border-t border-[#222533]">
         <div className="text-[11px] font-mono text-[#8E95A5] uppercase tracking-wider mb-2 font-bold">
@@ -61,12 +88,15 @@ export function BlunderCard({
             const source = sourceMap.get(ev.sourceId);
             const sourceTitle = source?.title || `Source ${ev.sourceId}`;
             const isVerified = ev.verification.status !== "unverified";
+            const provenance = source
+              ? classifySourceProvenance(source)
+              : null;
 
             return (
               <div
                 key={idx}
                 onClick={() => onSelectEvidence(ev, sourceTitle)}
-                className="group p-3.5 rounded-lg bg-[#0F1017] hover:bg-[#1C1F2E] border border-[#222533] hover:border-[#CCFF00]/50 cursor-pointer transition-all space-y-2"
+                className="group p-3.5 rounded-lg bg-[#0F1017] hover:bg-[#1C1F2E] border border-[#222533] hover:border-[#CCFF00]/50 cursor-pointer transition-all space-y-2.5"
                 title="Click to view highlighted quote in original document"
               >
                 <div className="flex items-center justify-between text-xs text-[#8E95A5]">
@@ -84,6 +114,16 @@ export function BlunderCard({
                     <span>{isVerified ? "Verified" : "Unverified"}</span>
                   </span>
                 </div>
+
+                {provenance && (
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`text-[10px] font-mono px-2 py-0.5 rounded border font-semibold ${provenance.color}`}
+                    >
+                      {provenance.badge}
+                    </span>
+                  </div>
+                )}
 
                 <blockquote className="font-mono text-xs text-[#CCFF00] italic border-l-2 border-[#CCFF00] pl-2.5 line-clamp-3 group-hover:text-white transition-colors">
                   &ldquo;{ev.quote}&rdquo;

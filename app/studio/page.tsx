@@ -18,7 +18,10 @@ import { CoverageOverview } from "@/components/analysis/CoverageOverview";
 import { BlunderReplay } from "@/components/chess/BlunderReplay";
 import { OpponentMode } from "@/components/chess/OpponentMode";
 import { EvidenceDrawer } from "@/components/evidence/EvidenceDrawer";
+import { ExecutiveDossierModal } from "@/components/analysis/ExecutiveDossierModal";
 import { DisclaimerFooter } from "@/components/common/DisclaimerFooter";
+import { sound } from "@/lib/sound";
+import { classifySourceProvenance } from "@/lib/provenance";
 
 import mockScholarshipAnalysis from "@/public/demo/scholarship/analysis.mock.json";
 
@@ -48,6 +51,8 @@ function StudioContent() {
     | "sources"
   >("brief");
   const [copiedReport, setCopiedReport] = useState(false);
+  const [isDossierOpen, setIsDossierOpen] = useState(false);
+  const [isAudioEnabled, setIsAudioEnabled] = useState(true);
 
   // Check URL query param for instant demo loading
   useEffect(() => {
@@ -148,6 +153,20 @@ function StudioContent() {
     setErrorMsg(null);
   };
 
+  const handleTabChange = (
+    tab:
+      | "brief"
+      | "blunder_replay"
+      | "opponent"
+      | "blunders"
+      | "darkspots"
+      | "matrix"
+      | "sources"
+  ) => {
+    sound.playPieceMove();
+    setActiveDashboardTab(tab);
+  };
+
   const handleCopyAnalysisSummary = () => {
     if (!analysis) return;
     const summary = `BLUNDER CHECK ANALYSIS REPORT
@@ -208,8 +227,36 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
           {/* Center / Right Control Panel */}
           <div className="flex items-center gap-2.5">
+            {/* Audio Toggle */}
+            <button
+              type="button"
+              onClick={() => {
+                const next = sound.toggle();
+                setIsAudioEnabled(next);
+                if (next) sound.playPieceMove();
+              }}
+              className={`px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold border transition-colors cursor-pointer flex items-center gap-1 ${
+                isAudioEnabled
+                  ? "bg-[#151722] text-[#CCFF00] border-[#CCFF00]/30 hover:border-[#CCFF00]/60"
+                  : "bg-[#0F1017] text-[#8E95A5] border-[#222533]"
+              }`}
+              title={isAudioEnabled ? "Sound Effects Enabled (Click to Mute)" : "Sound Effects Muted (Click to Unmute)"}
+            >
+              <span>{isAudioEnabled ? "🔊" : "🔇"}</span>
+              <span className="hidden sm:inline">{isAudioEnabled ? "SFX" : "Muted"}</span>
+            </button>
+
             {analysis ? (
               <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsDossierOpen(true)}
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold font-mono bg-[#151722] hover:bg-[#1C1F2E] text-[#CCFF00] border border-[#CCFF00]/30 hover:border-[#CCFF00]/60 transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs"
+                  title="Open formatted executive decision dossier (Print / PDF)"
+                >
+                  <span>📄</span>
+                  <span>Dossier</span>
+                </button>
                 <button
                   type="button"
                   onClick={handleCopyAnalysisSummary}
@@ -467,7 +514,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
               <nav className="flex items-center gap-1 sm:gap-2 font-mono">
                 <button
                   type="button"
-                  onClick={() => setActiveDashboardTab("brief")}
+                  onClick={() => handleTabChange("brief")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "brief"
                       ? "bg-[#151722] text-[#3B82F6] border-[#3B82F6]"
@@ -479,7 +526,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
                 <button
                   type="button"
-                  onClick={() => setActiveDashboardTab("blunder_replay")}
+                  onClick={() => handleTabChange("blunder_replay")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 border-t-2 ${
                     activeDashboardTab === "blunder_replay"
                       ? "bg-[#151722] text-[#CCFF00] border-[#CCFF00]"
@@ -494,7 +541,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
                 <button
                   type="button"
-                  onClick={() => setActiveDashboardTab("opponent")}
+                  onClick={() => handleTabChange("opponent")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 border-t-2 ${
                     activeDashboardTab === "opponent"
                       ? "bg-[#151722] text-[#EF4444] border-[#EF4444]"
@@ -509,7 +556,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
                 <button
                   type="button"
-                  onClick={() => setActiveDashboardTab("blunders")}
+                  onClick={() => handleTabChange("blunders")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "blunders"
                       ? "bg-[#151722] text-[#EF4444] border-[#EF4444]"
@@ -524,7 +571,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
                 <button
                   type="button"
-                  onClick={() => setActiveDashboardTab("darkspots")}
+                  onClick={() => handleTabChange("darkspots")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "darkspots"
                       ? "bg-[#151722] text-[#F59E0B] border-[#F59E0B]"
@@ -539,7 +586,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
                 <button
                   type="button"
-                  onClick={() => setActiveDashboardTab("matrix")}
+                  onClick={() => handleTabChange("matrix")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "matrix"
                       ? "bg-[#151722] text-[#CCFF00] border-[#CCFF00]"
@@ -551,7 +598,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
                 <button
                   type="button"
-                  onClick={() => setActiveDashboardTab("sources")}
+                  onClick={() => handleTabChange("sources")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "sources"
                       ? "bg-[#151722] text-[#3B82F6] border-[#3B82F6]"
@@ -786,63 +833,73 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {sources.map((s) => (
-                    <div
-                      key={s.id}
-                      className="p-4 rounded-xl bg-[#151722] border border-[#222533] space-y-3"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <span className="font-mono text-xs font-bold text-[#CCFF00] px-2 py-0.5 rounded bg-[#CCFF00]/10 border border-[#CCFF00]/30">
-                            {s.id.toUpperCase()}
-                          </span>
-                          <span className="text-xs font-semibold text-[#F8FAFC] truncate max-w-[220px]">
-                            {s.title}
-                          </span>
-                        </div>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0F1017] text-[#8E95A5] border border-[#222533]">
-                          {s.kind.toUpperCase()}
-                        </span>
-                      </div>
-
-                      <div className="text-xs text-[#8E95A5] flex items-center justify-between font-mono">
-                        <span>Size: {s.charCount.toLocaleString()} chars</span>
-                        <span className="text-[#CCFF00]">Status: {s.status}</span>
-                      </div>
-
-                      {s.dateSignals && s.dateSignals.length > 0 && (
-                        <div className="text-[11px] font-mono text-[#F59E0B] bg-[#F59E0B]/10 p-2 rounded border border-[#F59E0B]/20">
-                          Cycle notices detected: {s.dateSignals.join(", ")}
-                        </div>
-                      )}
-
-                      <div className="p-2.5 rounded bg-[#0F1017] border border-[#222533] text-xs font-mono text-slate-300 max-h-36 overflow-y-auto">
-                        <pre className="whitespace-pre-wrap font-sans text-xs line-clamp-6">
-                          {s.text}
-                        </pre>
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setSelectedEvidence({
-                            claimId: `${s.id}-overview`,
-                            sourceId: s.id,
-                            claim: "Source Overview",
-                            quote: s.text.slice(0, 100),
-                            verification: {
-                              status: "exact",
-                              start: 0,
-                              end: Math.min(100, s.text.length),
-                            },
-                          });
-                        }}
-                        className="text-xs text-[#3B82F6] hover:text-[#CCFF00] hover:underline font-semibold font-mono block"
+                  {sources.map((s) => {
+                    const prov = classifySourceProvenance(s);
+                    return (
+                      <div
+                        key={s.id}
+                        className="p-4 rounded-xl bg-[#151722] border border-[#222533] space-y-3"
                       >
-                        Inspect in Full Document Viewer →
-                      </button>
-                    </div>
-                  ))}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <span className="font-mono text-xs font-bold text-[#CCFF00] px-2 py-0.5 rounded bg-[#CCFF00]/10 border border-[#CCFF00]/30">
+                              {s.id.toUpperCase()}
+                            </span>
+                            <span className="text-xs font-semibold text-[#F8FAFC] truncate max-w-[220px]">
+                              {s.title}
+                            </span>
+                          </div>
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0F1017] text-[#8E95A5] border border-[#222533]">
+                            {s.kind.toUpperCase()}
+                          </span>
+                        </div>
+
+                        {/* Provenance Badge */}
+                        <div className="flex items-center gap-2">
+                          <span className={`text-[10px] font-mono px-2 py-0.5 rounded border font-semibold ${prov.color}`}>
+                            {prov.badge}
+                          </span>
+                        </div>
+
+                        <div className="text-xs text-[#8E95A5] flex items-center justify-between font-mono">
+                          <span>Size: {s.charCount.toLocaleString()} chars</span>
+                          <span className="text-[#CCFF00]">Status: {s.status}</span>
+                        </div>
+
+                        {s.dateSignals && s.dateSignals.length > 0 && (
+                          <div className="text-[11px] font-mono text-[#F59E0B] bg-[#F59E0B]/10 p-2 rounded border border-[#F59E0B]/20">
+                            Cycle notices detected: {s.dateSignals.join(", ")}
+                          </div>
+                        )}
+
+                        <div className="p-2.5 rounded bg-[#0F1017] border border-[#222533] text-xs font-mono text-slate-300 max-h-36 overflow-y-auto">
+                          <pre className="whitespace-pre-wrap font-sans text-xs line-clamp-6">
+                            {s.text}
+                          </pre>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelectedEvidence({
+                              claimId: `${s.id}-overview`,
+                              sourceId: s.id,
+                              claim: "Source Overview",
+                              quote: s.text.slice(0, 100),
+                              verification: {
+                                status: "exact",
+                                start: 0,
+                                end: Math.min(100, s.text.length),
+                              },
+                            });
+                          }}
+                          className="text-xs text-[#3B82F6] hover:text-[#CCFF00] hover:underline font-semibold font-mono block"
+                        >
+                          Inspect in Full Document Viewer →
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -852,6 +909,13 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
               evidence={selectedEvidence}
               sources={analysis.sources}
               onClose={() => setSelectedEvidence(null)}
+            />
+
+            {/* Executive Decision Dossier Print/Export Modal */}
+            <ExecutiveDossierModal
+              analysis={analysis}
+              isOpen={isDossierOpen}
+              onClose={() => setIsDossierOpen(false)}
             />
           </div>
         )}

@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import type { Analysis, CoverageStatus, ScoreResult } from "@/schemas";
 import { computeScore } from "@/lib/scoring";
 import { EvaluationBar } from "./EvaluationBar";
+import { sound } from "@/lib/sound";
 
 interface BlunderReplayProps {
   analysis: Analysis;
@@ -92,6 +93,7 @@ export function BlunderReplay({ analysis }: BlunderReplayProps) {
     resolvedBlunderIds.size > 0 || resolvedDarkSpotIds.size > 0 || resolvedOutdated;
 
   const toggleBlunder = (id: string) => {
+    sound.playEvalRise();
     setResolvedBlunderIds((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
@@ -101,6 +103,7 @@ export function BlunderReplay({ analysis }: BlunderReplayProps) {
   };
 
   const toggleDarkSpot = (id: string) => {
+    sound.playEvalRise();
     setResolvedDarkSpotIds((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
@@ -359,3 +362,4 @@ export function BlunderReplay({ analysis }: BlunderReplayProps) {
     </div>
   );
 }
+

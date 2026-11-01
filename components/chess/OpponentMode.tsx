@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import type { Analysis, VerifyNext } from "@/schemas";
+import { sound } from "@/lib/sound";
 
 interface OpponentModeProps {
   analysis: Analysis;
@@ -185,7 +186,10 @@ export function OpponentMode({ analysis }: OpponentModeProps) {
                 }`}
               >
                 <div
-                  onClick={() => setActiveVector(isOpen ? null : idx)}
+                  onClick={() => {
+                    if (!isOpen) sound.playBlunderAlert();
+                    setActiveVector(isOpen ? null : idx);
+                  }}
                   className="flex items-start justify-between gap-3 cursor-pointer select-none"
                 >
                   <div className="space-y-1">
@@ -245,3 +249,4 @@ export function OpponentMode({ analysis }: OpponentModeProps) {
     </div>
   );
 }
+
