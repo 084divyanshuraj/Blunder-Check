@@ -1,0 +1,12 @@
+{
+  "id": "visa",
+  "label": "UK Global Talent Visa 2026 (Sample Case)",
+  "question": "What should I verify before applying for the UK Global Talent Visa (Tech Nation Endorsement) in 2026?",
+  "goal": "Secure endorsement without rejection due to missing recommendation letters, conflicting processing timelines, or unverified fee terms.",
+  "synthetic": true,
+  "sources": [
+    { "id": "s1", "kind": "paste", "title": "UK Visas & Immigration: Global Talent Official Guidance", "file": "s1-govuk-guidance.txt" },
+    { "id": "s2", "kind": "paste", "title": "Tech Immigration Solicitor Blog & Portal", "file": "s2-tech-solicitor-blog.txt" },
+    { "id": "s3", "kind": "pdf", "title": "Tech Nation Visa Legacy Handbook 2024-25 (PDF)", "file": "s3-old-tech-nation-guide.txt" }
+  ]
+}

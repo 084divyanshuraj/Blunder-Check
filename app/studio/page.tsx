@@ -60,11 +60,13 @@ function StudioContent() {
       handleLoadDemo("scholarship", true);
     } else if (demoParam === "hostel") {
       handleLoadDemo("hostel", true);
+    } else if (demoParam === "visa") {
+      handleLoadDemo("visa", true);
     }
   }, [demoParam]);
 
   const handleLoadDemo = async (
-    demoKey: "scholarship" | "hostel",
+    demoKey: "scholarship" | "hostel" | "visa",
     instantMock = true
   ) => {
     setErrorMsg(null);
@@ -294,6 +296,14 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                 >
                   <span>🏠</span>
                   <span>Hostel</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleLoadDemo("visa", true)}
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#151722] hover:bg-[#1C1F2E] text-[#38BDF8] border border-[#38BDF8]/40 hover:border-[#38BDF8]/60 transition-colors cursor-pointer flex items-center gap-1"
+                >
+                  <span>🌐</span>
+                  <span>Visa</span>
                 </button>
               </div>
             )}

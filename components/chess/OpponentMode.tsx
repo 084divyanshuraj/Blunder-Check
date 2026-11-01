@@ -12,6 +12,9 @@ export function OpponentMode({ analysis }: OpponentModeProps) {
   const [activeVector, setActiveVector] = useState<number | null>(null);
 
   // Derive Adversarial Persona from question/goal
+  const isVisa =
+    analysis.question.toLowerCase().includes("visa") ||
+    analysis.goal.toLowerCase().includes("visa");
   const isHostel =
     analysis.question.toLowerCase().includes("hostel") ||
     analysis.goal.toLowerCase().includes("hostel");
@@ -19,7 +22,15 @@ export function OpponentMode({ analysis }: OpponentModeProps) {
     analysis.question.toLowerCase().includes("scholarship") ||
     analysis.goal.toLowerCase().includes("scholarship");
 
-  const opponent = isHostel
+  const opponent = isVisa
+    ? {
+        name: "Dame Margaret Sterling, KC",
+        title: "Senior Casework Auditor, UK Visas & Tech Endorsement Board",
+        avatar: "⚖️",
+        personaNote:
+          "Specializes in evidentiary rigor for high-skilled migration dossiers. Rejects submissions containing conflicting recommendation counts or unverified statutory deadlines on day one.",
+      }
+    : isHostel
     ? {
         name: "Col. R. K. Nair (Retd.)",
         title: "Chief Warden & Estate Allotment Committee",

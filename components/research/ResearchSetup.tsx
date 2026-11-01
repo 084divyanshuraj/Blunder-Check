@@ -12,7 +12,7 @@ interface ResearchSetupProps {
   sources: SourceRecord[];
   setSources: React.Dispatch<React.SetStateAction<SourceRecord[]>>;
   onStartAnalysis: () => void;
-  onLoadDemo: (demoKey: "scholarship" | "hostel", instantMock?: boolean) => void;
+  onLoadDemo: (demoKey: "scholarship" | "hostel" | "visa", instantMock?: boolean) => void;
   isAnalyzing: boolean;
 }
 
@@ -176,14 +176,21 @@ export function ResearchSetup({
             onClick={() => onLoadDemo("scholarship", true)}
             className="px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono bg-[#CCFF00]/10 hover:bg-[#CCFF00]/20 text-[#CCFF00] border border-[#CCFF00]/30 transition-colors cursor-pointer"
           >
-            🏆 Case 1: Scholarship (Instant)
+            🏆 Case 1: Scholarship
           </button>
           <button
             type="button"
             onClick={() => onLoadDemo("hostel", true)}
             className="px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono bg-[#2563EB]/20 hover:bg-[#2563EB]/30 text-[#60A5FA] border border-[#2563EB]/40 transition-colors cursor-pointer"
           >
-            🏠 Case 2: Hostel (Instant)
+            🏠 Case 2: Hostel
+          </button>
+          <button
+            type="button"
+            onClick={() => onLoadDemo("visa", true)}
+            className="px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono bg-[#38BDF8]/20 hover:bg-[#38BDF8]/30 text-[#38BDF8] border border-[#38BDF8]/40 transition-colors cursor-pointer"
+          >
+            🌐 Case 3: Visa
           </button>
           <button
             type="button"

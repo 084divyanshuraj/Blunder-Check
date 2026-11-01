@@ -1,0 +1,653 @@
+{
+  "id": "an-mvxgpzqw-d7bk",
+  "createdAt": "2026-11-01T06:42:12.920Z",
+  "mode": "demo_cached",
+  "question": "What should I verify before applying for the UK Global Talent Visa (Tech Nation Endorsement) in 2026?",
+  "goal": "Secure endorsement without rejection due to missing recommendation letters, conflicting processing timelines, or unverified fee terms.",
+  "checklist": [
+    {
+      "id": "c1",
+      "item": "Eligibility criteria for Exceptional Talent vs Exceptional Promise track in 2026",
+      "importance": "high"
+    },
+    {
+      "id": "c2",
+      "item": "Required number, author background criteria, and content format for recommendation letters",
+      "importance": "high"
+    },
+    {
+      "id": "c3",
+      "item": "Acceptable types of documentary evidence and strict page or file limit rules",
+      "importance": "high"
+    },
+    {
+      "id": "c4",
+      "item": "Current endorsement application fee amounts and valid payment mechanisms",
+      "importance": "medium"
+    },
+    {
+      "id": "c5",
+      "item": "Expected processing timelines for standard and fast-track endorsement applications",
+      "importance": "medium"
+    },
+    {
+      "id": "c6",
+      "item": "Official submission platform and designated endorsing body for tech applicants in 2026",
+      "importance": "high"
+    },
+    {
+      "id": "c7",
+      "item": "Review request process, eligibility criteria, and deadline if an endorsement application is refused",
+      "importance": "medium"
+    },
+    {
+      "id": "c8",
+      "item": "Maximum permitted timeline between receiving endorsement approval and submitting the Stage 2 visa application",
+      "importance": "high"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "paste",
+      "title": "UK Visas & Immigration: Global Talent Official Guidance",
+      "charCount": 1212,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "published",
+          "value": "15 January 2026",
+          "quote": "Policy Guidance published: 15 January 2026",
+          "verification": {
+            "status": "exact",
+            "start": 176,
+            "end": 218
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo based on UK Global Talent immigration framework.\n\nUK Visas and Immigration: Global Talent Visa (Digital Technology)\nPolicy Guidance published: 15 January 2026\n\nTo apply for Stage 1 (Endorsement) under Digital Technology, applicants must provide exactly 3 letters of recommendation from recognized leaders in the digital technology sector. Each letter must be dated within 3 months of application and must be written on official letterhead.\n\nThe standard processing time for the endorsement stage is typically up to 8 weeks.\n\nThe endorsement application fee is £524 (Stage 1) and the visa application fee is £192 (Stage 2). In addition, applicants must pay the Immigration Health Surcharge (£1,035 per year of visa requested).\n\nMandatory Criterion: Applicants must demonstrate that they have been recognized as a leading talent or potential talent in digital technology.\nOptional Criteria: Applicants must demonstrate at least 2 of the 4 optional criteria (innovation, recognition beyond routine work, significant technical/commercial contribution, or academic research).\n\nAll applications must be submitted via the official Home Office digital portal.\n"
+    },
+    {
+      "id": "s2",
+      "kind": "paste",
+      "title": "Tech Immigration Solicitor Blog & Portal",
+      "charCount": 806,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "updated",
+          "value": "20 February 2026",
+          "quote": "Updated: 20 February 2026",
+          "verification": {
+            "status": "exact",
+            "start": 165,
+            "end": 190
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo representing an immigration adviser blog.\n\nUK Tech Nation Global Talent Visa Overview & Fast-Track Route\nUpdated: 20 February 2026\n\nFast-track endorsement applications are processed within 3 weeks under the qualifying incubator and accelerator route. If your startup was backed by an authorized accelerator, you qualify for priority turnaround.\n\nYou only need 2 letters of recommendation if you are an exceptional promise applicant who graduated from an authorized incubator program within the past 12 months.\n\nTotal official filing fees are £716.\n\nApplicants can submit up to 10 pieces of documentary evidence demonstrating their contribution to the digital technology ecosystem. Letters from mentors or early investors are strongly encouraged.\n"
+    },
+    {
+      "id": "s3",
+      "kind": "pdf",
+      "title": "Tech Nation Visa Legacy Handbook 2024-25 (PDF)",
+      "charCount": 596,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "published",
+          "value": "August 2024",
+          "quote": "Published: August 2024",
+          "verification": {
+            "status": "exact",
+            "start": 155,
+            "end": 177
+          }
+        },
+        {
+          "kind": "cycle",
+          "value": "2024-25",
+          "quote": "Tech Nation Visa Alumni Guide 2024-25 (PDF Circular)",
+          "verification": {
+            "status": "exact",
+            "start": 102,
+            "end": 154
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo representing an outdated guidance guide.\n\nTech Nation Visa Alumni Guide 2024-25 (PDF Circular)\nPublished: August 2024\n\nStage 1 endorsement application fee was £456 for the 2024-25 cycle.\n\nQualifying applicants must submit evidence demonstrating technical skills in areas including artificial intelligence, cybersecurity, and cloud architecture.\n\nDependent family members can apply simultaneously; please check local embassy processing delays.\n\nPlease ensure all supporting letters are translated into English by a certified translator.\n"
+    }
+  ],
+  "claims": [
+    {
+      "checklistId": "c2",
+      "claim": "Applicants for Stage 1 endorsement in Digital Technology must provide exactly 3 letters of recommendation from recognized leaders in the digital technology sector.",
+      "quote": "To apply for Stage 1 (Endorsement) under Digital Technology, applicants must provide exactly 3 letters of recommendation from recognized leaders in the digital technology sector.",
+      "visibleDate": null,
+      "id": "s1-k1",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 220,
+        "end": 398
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "Each recommendation letter must be dated within 3 months of application and written on official letterhead.",
+      "quote": "Each letter must be dated within 3 months of application and must be written on official letterhead.",
+      "visibleDate": null,
+      "id": "s1-k2",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 399,
+        "end": 499
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "The standard processing time for the endorsement stage is typically up to 8 weeks.",
+      "quote": "The standard processing time for the endorsement stage is typically up to 8 weeks.",
+      "visibleDate": null,
+      "id": "s1-k3",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 501,
+        "end": 583
+      }
+    },
+    {
+      "checklistId": "c4",
+      "claim": "The endorsement application fee for Stage 1 is £524 and the visa application fee for Stage 2 is £192.",
+      "quote": "The endorsement application fee is £524 (Stage 1) and the visa application fee is £192 (Stage 2).",
+      "visibleDate": null,
+      "id": "s1-k4",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 585,
+        "end": 682
+      }
+    },
+    {
+      "checklistId": "c4",
+      "claim": "Applicants must pay an Immigration Health Surcharge of £1,035 per year of visa requested.",
+      "quote": "In addition, applicants must pay the Immigration Health Surcharge (£1,035 per year of visa requested).",
+      "visibleDate": null,
+      "id": "s1-k5",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 683,
+        "end": 785
+      }
+    },
+    {
+      "checklistId": "c1",
+      "claim": "The Mandatory Criterion requires applicants to demonstrate recognition as a leading talent or potential talent in digital technology.",
+      "quote": "Mandatory Criterion: Applicants must demonstrate that they have been recognized as a leading talent or potential talent in digital technology.",
+      "visibleDate": null,
+      "id": "s1-k6",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 787,
+        "end": 929
+      }
+    },
+    {
+      "checklistId": "c1",
+      "claim": "Applicants must satisfy at least 2 of 4 optional criteria, including innovation, recognition beyond routine work, significant technical/commercial contribution, or academic research.",
+      "quote": "Optional Criteria: Applicants must demonstrate at least 2 of the 4 optional criteria (innovation, recognition beyond routine work, significant technical/commercial contribution, or academic research).",
+      "visibleDate": null,
+      "id": "s1-k7",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 930,
+        "end": 1130
+      }
+    },
+    {
+      "checklistId": "c6",
+      "claim": "All applications must be submitted through the official Home Office digital portal.",
+      "quote": "All applications must be submitted via the official Home Office digital portal.",
+      "visibleDate": null,
+      "id": "s1-k8",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 1132,
+        "end": 1211
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "Fast-track endorsement applications under the qualifying incubator and accelerator route are processed within 3 weeks.",
+      "quote": "Fast-track endorsement applications are processed within 3 weeks under the qualifying incubator and accelerator route.",
+      "visibleDate": null,
+      "id": "s2-k1",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 192,
+        "end": 310
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "Applicants qualify for priority turnaround if their startup was backed by an authorized accelerator.",
+      "quote": "If your startup was backed by an authorized accelerator, you qualify for priority turnaround.",
+      "visibleDate": null,
+      "id": "s2-k2",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 311,
+        "end": 404
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "Exceptional promise applicants who graduated from an authorized incubator program within the past 12 months only need 2 letters of recommendation.",
+      "quote": "You only need 2 letters of recommendation if you are an exceptional promise applicant who graduated from an authorized incubator program within the past 12 months.",
+      "visibleDate": null,
+      "id": "s2-k3",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 406,
+        "end": 569
+      }
+    },
+    {
+      "checklistId": "c4",
+      "claim": "Total official filing fees amount to £716.",
+      "quote": "Total official filing fees are £716.",
+      "visibleDate": null,
+      "id": "s2-k4",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 571,
+        "end": 607
+      }
+    },
+    {
+      "checklistId": "c3",
+      "claim": "Applicants may submit up to 10 pieces of documentary evidence demonstrating their contribution to the digital technology ecosystem.",
+      "quote": "Applicants can submit up to 10 pieces of documentary evidence demonstrating their contribution to the digital technology ecosystem.",
+      "visibleDate": null,
+      "id": "s2-k5",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 609,
+        "end": 740
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "Letters of recommendation or evidence from mentors or early investors are strongly encouraged.",
+      "quote": "Letters from mentors or early investors are strongly encouraged.",
+      "visibleDate": null,
+      "id": "s2-k6",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 741,
+        "end": 805
+      }
+    },
+    {
+      "checklistId": "c4",
+      "claim": "The Stage 1 endorsement application fee was £456 for the 2024-25 cycle.",
+      "quote": "Stage 1 endorsement application fee was £456 for the 2024-25 cycle.",
+      "visibleDate": "2024-25",
+      "id": "s3-k1",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 179,
+        "end": 246
+      }
+    },
+    {
+      "checklistId": "c3",
+      "claim": "Qualifying applicants must submit evidence demonstrating technical skills in areas such as artificial intelligence, cybersecurity, and cloud architecture.",
+      "quote": "Qualifying applicants must submit evidence demonstrating technical skills in areas including artificial intelligence, cybersecurity, and cloud architecture.",
+      "visibleDate": null,
+      "id": "s3-k2",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 248,
+        "end": 404
+      }
+    },
+    {
+      "checklistId": null,
+      "claim": "Dependent family members can apply simultaneously, with applicants advised to check local embassy processing delays.",
+      "quote": "Dependent family members can apply simultaneously; please check local embassy processing delays.",
+      "visibleDate": null,
+      "id": "s3-k3",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 406,
+        "end": 502
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "All supporting letters must be translated into English by a certified translator.",
+      "quote": "Please ensure all supporting letters are translated into English by a certified translator.",
+      "visibleDate": null,
+      "id": "s3-k4",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 504,
+        "end": 595
+      }
+    }
+  ],
+  "result": {
+    "evalReasoning": "The reviewed sources provide partial guidance for applying for the UK Global Talent Visa in 2026, but key gaps and conflicting details remain. A notable conflict exists between official guidance and third-party advice regarding recommendation letter counts, and earlier fee figures are outdated. Critical procedural details such as post-endorsement timelines and refusal review guidelines are missing in the reviewed sources.",
+    "coverage": [
+      {
+        "id": "c1",
+        "item": "Eligibility criteria for Exceptional Talent vs Exceptional Promise track in 2026",
+        "importance": "high",
+        "status": "unanswered",
+        "supportingClaimIds": [
+          "s1-k6",
+          "s1-k7"
+        ]
+      },
+      {
+        "id": "c2",
+        "item": "Required number, author background criteria, and content format for recommendation letters",
+        "importance": "high",
+        "status": "conflicted",
+        "supportingClaimIds": [
+          "s1-k1",
+          "s1-k2",
+          "s2-k3",
+          "s2-k6",
+          "s3-k4"
+        ]
+      },
+      {
+        "id": "c3",
+        "item": "Acceptable types of documentary evidence and strict page or file limit rules",
+        "importance": "high",
+        "status": "unanswered",
+        "supportingClaimIds": [
+          "s2-k5",
+          "s3-k2"
+        ]
+      },
+      {
+        "id": "c4",
+        "item": "Current endorsement application fee amounts and valid payment mechanisms",
+        "importance": "medium",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k4",
+          "s1-k5",
+          "s2-k4",
+          "s3-k1"
+        ]
+      },
+      {
+        "id": "c5",
+        "item": "Expected processing timelines for standard and fast-track endorsement applications",
+        "importance": "medium",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k3",
+          "s2-k1",
+          "s2-k2"
+        ]
+      },
+      {
+        "id": "c6",
+        "item": "Official submission platform and designated endorsing body for tech applicants in 2026",
+        "importance": "high",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k8"
+        ]
+      },
+      {
+        "id": "c7",
+        "item": "Review request process, eligibility criteria, and deadline if an endorsement application is refused",
+        "importance": "medium",
+        "status": "missing",
+        "supportingClaimIds": []
+      },
+      {
+        "id": "c8",
+        "item": "Maximum permitted timeline between receiving endorsement approval and submitting the Stage 2 visa application",
+        "importance": "high",
+        "status": "missing",
+        "supportingClaimIds": []
+      }
+    ],
+    "blunders": [
+      {
+        "id": "b1",
+        "type": "conflict",
+        "checklistId": "c2",
+        "severity": "high",
+        "description": "Official guidance indicates that applicants must provide exactly 3 letters of recommendation, whereas the solicitor portal claims certain Exceptional Promise applicants need only 2 letters.",
+        "evidence": [
+          {
+            "claimId": "s1-k1",
+            "sourceId": "s1",
+            "claim": "Applicants for Stage 1 endorsement in Digital Technology must provide exactly 3 letters of recommendation from recognized leaders in the digital technology sector.",
+            "quote": "To apply for Stage 1 (Endorsement) under Digital Technology, applicants must provide exactly 3 letters of recommendation from recognized leaders in the digital technology sector.",
+            "verification": {
+              "status": "exact",
+              "start": 220,
+              "end": 398
+            }
+          },
+          {
+            "claimId": "s2-k3",
+            "sourceId": "s2",
+            "claim": "Exceptional promise applicants who graduated from an authorized incubator program within the past 12 months only need 2 letters of recommendation.",
+            "quote": "You only need 2 letters of recommendation if you are an exceptional promise applicant who graduated from an authorized incubator program within the past 12 months.",
+            "verification": {
+              "status": "exact",
+              "start": 406,
+              "end": 569
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "b2",
+        "type": "outdated",
+        "checklistId": "c4",
+        "severity": "medium",
+        "description": "Claim s3-k1 quotes a Stage 1 fee of £456 for the 2024-25 cycle, which is superseded by the 2026 official guidance fee of £524 cited in claim s1-k4.",
+        "evidence": [
+          {
+            "claimId": "s3-k1",
+            "sourceId": "s3",
+            "claim": "The Stage 1 endorsement application fee was £456 for the 2024-25 cycle.",
+            "quote": "Stage 1 endorsement application fee was £456 for the 2024-25 cycle.",
+            "verification": {
+              "status": "exact",
+              "start": 179,
+              "end": 246
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      }
+    ],
+    "missedMoves": [
+      {
+        "id": "m1",
+        "checklistId": "c1",
+        "kind": "unanswered",
+        "importance": "high",
+        "description": "The claims note mandatory and optional criteria generally, but do not detail how requirements differ between Exceptional Talent and Exceptional Promise tracks.",
+        "whyItMatters": "Applying under the wrong track criteria increases the risk of endorsement refusal due to inappropriate evidence submission.",
+        "scope": "Mentioned, but not fully established in the 3 reviewed sources.",
+        "label": "unknown"
+      },
+      {
+        "id": "m2",
+        "checklistId": "c3",
+        "kind": "unanswered",
+        "importance": "high",
+        "description": "While the maximum number of evidence items is mentioned, strict page limit rules and file formatting constraints are not detailed.",
+        "whyItMatters": "Exceeding strict page limits per document can cause evidence items to be disregarded by assessors.",
+        "scope": "Mentioned, but not fully established in the 3 reviewed sources.",
+        "label": "unknown"
+      },
+      {
+        "id": "m3",
+        "checklistId": "c7",
+        "kind": "missing",
+        "importance": "medium",
+        "description": "The reviewed sources do not specify the endorsement review request process, eligibility, or deadline following a refusal.",
+        "whyItMatters": "Applicants whose endorsement is refused need clear timeline guidelines to exercise their right to a review before deadlines pass.",
+        "scope": "Not found in the 3 reviewed sources.",
+        "label": "unknown"
+      },
+      {
+        "id": "m4",
+        "checklistId": "c8",
+        "kind": "missing",
+        "importance": "high",
+        "description": "No reviewed claim establishes the maximum permitted time between endorsement approval and submitting the Stage 2 visa application.",
+        "whyItMatters": "Failing to apply for Stage 2 within the permitted window after endorsement approval could invalidate the endorsement.",
+        "scope": "Not found in the 3 reviewed sources.",
+        "label": "unknown"
+      }
+    ],
+    "hangingPieces": [
+      {
+        "id": "h1",
+        "checklistId": "c2",
+        "impact": "high",
+        "description": "Contradiction regarding whether 2 or 3 recommendation letters are required for incubator graduate applicants.",
+        "label": "ai_inferred"
+      },
+      {
+        "id": "h2",
+        "checklistId": "c8",
+        "impact": "high",
+        "description": "Unverified deadline for submitting the Stage 2 visa application after receiving Stage 1 endorsement.",
+        "label": "unknown"
+      },
+      {
+        "id": "h3",
+        "checklistId": "c6",
+        "impact": "high",
+        "description": "Lack of clarity on the official designated endorsing body executing assessments alongside the Home Office portal in 2026.",
+        "label": "ai_inferred"
+      }
+    ],
+    "verifyNext": [
+      {
+        "priority": "high",
+        "action": "Verify whether 3 recommendation letters are strictly mandatory for all tech applicants without exception.",
+        "reason": "Submitting fewer recommendation letters than required leads to immediate administrative invalidation.",
+        "whereToVerify": "Official UK Government Global Talent Visa guidance portal",
+        "relatedChecklistId": "c2",
+        "label": "ai_inferred",
+        "id": "v1",
+        "rank": 1,
+        "triggers": [
+          "b1",
+          "h1"
+        ]
+      },
+      {
+        "priority": "high",
+        "action": "Confirm the exact deadline allowed between endorsement approval and submitting the Stage 2 visa application.",
+        "reason": "Missing this statutory deadline requires restarting the entire endorsement application process.",
+        "whereToVerify": "Official UK Visas and Immigration policy guidance pages",
+        "relatedChecklistId": "c8",
+        "label": "ai_inferred",
+        "id": "v2",
+        "rank": 2,
+        "triggers": [
+          "m4",
+          "h2"
+        ]
+      },
+      {
+        "priority": "high",
+        "action": "Confirm from the official source: Eligibility criteria for Exceptional Talent vs Exceptional Promise track in 2026.",
+        "reason": "Mentioned, but not fully established in the reviewed sources.",
+        "whereToVerify": "The official notice or website of the issuing organisation, not a third-party page.",
+        "relatedChecklistId": "c1",
+        "label": "ai_inferred",
+        "id": "v3",
+        "rank": 3,
+        "triggers": [
+          "m1"
+        ]
+      },
+      {
+        "priority": "medium",
+        "action": "Check the specific evidence page length restrictions and acceptable document payment mechanisms.",
+        "reason": "Non-compliant file formats or unapproved payment methods can delay application processing.",
+        "whereToVerify": "Official Home Office digital technology visa application rules",
+        "relatedChecklistId": "c3",
+        "label": "ai_inferred",
+        "id": "v4",
+        "rank": 4,
+        "triggers": [
+          "m2"
+        ]
+      },
+      {
+        "priority": "medium",
+        "action": "Clarify the endorsement review request application process and submission deadline if endorsement is refused.",
+        "reason": "Knowing review terms in advance ensures swift action if an endorsement decision needs to be contested.",
+        "whereToVerify": "Official UK Visas and Immigration endorsement review guidance",
+        "relatedChecklistId": "c7",
+        "label": "ai_inferred",
+        "id": "v5",
+        "rank": 5,
+        "triggers": [
+          "m3"
+        ]
+      }
+    ],
+    "score": {
+      "value": -0.3,
+      "coverage": 0.519,
+      "version": "v1",
+      "factors": [
+        {
+          "key": "coverage",
+          "label": "Importance-weighted coverage",
+          "delta": 0.2,
+          "detail": "52% of weighted checklist items are established by verified quotations (conflicted items count half, unanswered items 40%)."
+        },
+        {
+          "key": "staleness",
+          "label": "Possibly outdated information",
+          "delta": -0.5,
+          "detail": "1 outdated-information warning(s), each backed by a visible date or cycle."
+        }
+      ],
+      "capApplied": null
+    },
+    "warnings": [],
+    "scopeNote": "Reviewed 3 sources: UK Visas & Immigration: Global Talent Official Guidance; Tech Immigration Solicitor Blog & Portal; Tech Nation Visa Legacy Handbook 2024-25 (PDF).",
+    "disclaimer": "Based on reviewed sources only. Absence in these sources does not mean absence in reality."
+  }
+}

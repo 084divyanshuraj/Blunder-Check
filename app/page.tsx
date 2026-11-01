@@ -110,13 +110,20 @@ export default function LandingPage() {
             <span>🏠</span>
             <span>Case 2: Hostel Demo</span>
           </Link>
+          <Link
+            href="/studio?demo=visa"
+            className="px-5 py-3 rounded-xl text-sm font-semibold font-mono bg-[#151722] hover:bg-[#1C1F2E] text-[#38BDF8] border border-[#38BDF8]/40 hover:border-[#38BDF8]/60 transition-all flex items-center gap-2"
+          >
+            <span>🌐</span>
+            <span>Case 3: Visa Demo</span>
+          </Link>
         </div>
 
         {/* Live Engine Proof Badges */}
         <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-[#8E95A5] font-mono">
           <div className="flex items-center gap-1.5">
             <span className="text-[#CCFF00]">✓</span>
-            <span>49/49 Vitest Unit Tests Passing</span>
+            <span>52/52 Vitest Unit Tests Passing</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="text-[#3B82F6]">✓</span>
@@ -385,25 +392,27 @@ export default function LandingPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Case 1 */}
-          <div className="p-6 rounded-2xl bg-[#151722] border border-[#222533] hover:border-[#CCFF00]/40 transition-all space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-mono font-bold text-[#CCFF00] px-2 py-0.5 rounded bg-[#CCFF00]/10 border border-[#CCFF00]/30">
-                Case 01 • Scholarship Application
-              </span>
-              <span className="text-xs font-mono text-[#8E95A5]">4 Sources</span>
+          <div className="p-6 rounded-2xl bg-[#151722] border border-[#222533] hover:border-[#CCFF00]/40 transition-all space-y-4 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold text-[#CCFF00] px-2 py-0.5 rounded bg-[#CCFF00]/10 border border-[#CCFF00]/30">
+                  Case 01 • Scholarship
+                </span>
+                <span className="text-xs font-mono text-[#8E95A5]">4 Sources</span>
+              </div>
+              <h4 className="text-lg font-bold text-[#F8FAFC]">
+                Aurora Merit Scholarship 2026-27
+              </h4>
+              <p className="text-xs text-[#8E95A5] leading-relaxed">
+                Official page, student blog, scholarship aggregator, and foundation circular. Features 3 conflicting deadlines, outdated 2025-26 cycle info, and zero coverage on renewal rules.
+              </p>
             </div>
-            <h4 className="text-lg font-bold text-[#F8FAFC]">
-              Aurora Merit Scholarship 2026-27
-            </h4>
-            <p className="text-xs text-[#8E95A5] leading-relaxed">
-              Official page, student blog, scholarship aggregator, and foundation circular. Features 3 conflicting deadlines, outdated 2025-26 cycle information, and zero coverage on renewal rules.
-            </p>
             <div className="pt-2 flex items-center gap-3">
               <Link
                 href="/studio?demo=scholarship"
-                className="px-4 py-2 rounded-lg text-xs font-bold font-mono bg-[#CCFF00] hover:bg-lime-400 text-[#08080C] transition-colors"
+                className="w-full text-center px-4 py-2 rounded-lg text-xs font-bold font-mono bg-[#CCFF00] hover:bg-lime-400 text-[#08080C] transition-colors"
               >
                 Launch Case 1 (Instant) →
               </Link>
@@ -411,25 +420,53 @@ export default function LandingPage() {
           </div>
 
           {/* Case 2 */}
-          <div className="p-6 rounded-2xl bg-[#151722] border border-[#222533] hover:border-[#2563EB]/50 transition-all space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-mono font-bold text-[#60A5FA] px-2 py-0.5 rounded bg-[#2563EB]/20 border border-[#2563EB]/40">
-                Case 02 • College Hostel Allotment
-              </span>
-              <span className="text-xs font-mono text-[#8E95A5]">3 Sources</span>
+          <div className="p-6 rounded-2xl bg-[#151722] border border-[#222533] hover:border-[#2563EB]/50 transition-all space-y-4 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold text-[#60A5FA] px-2 py-0.5 rounded bg-[#2563EB]/20 border border-[#2563EB]/40">
+                  Case 02 • College Hostel
+                </span>
+                <span className="text-xs font-mono text-[#8E95A5]">3 Sources</span>
+              </div>
+              <h4 className="text-lg font-bold text-[#F8FAFC]">
+                Northfield Institute Hostel Allotment
+              </h4>
+              <p className="text-xs text-[#8E95A5] leading-relaxed">
+                Official allotment memo, student forum FAQ, and 2025-26 student handbook. Features contradictory fee amounts (₹68k vs ₹72k), document discrepancies, and missing refund terms.
+              </p>
             </div>
-            <h4 className="text-lg font-bold text-[#F8FAFC]">
-              Northfield Institute Hostel Allotment
-            </h4>
-            <p className="text-xs text-[#8E95A5] leading-relaxed">
-              Official allotment memo, student forum FAQ, and 2025-26 student handbook. Features contradictory fee amounts (₹68k vs ₹72k), document discrepancies, and missing refund terms.
-            </p>
             <div className="pt-2 flex items-center gap-3">
               <Link
                 href="/studio?demo=hostel"
-                className="px-4 py-2 rounded-lg text-xs font-bold font-mono bg-[#2563EB] hover:bg-blue-600 text-white transition-colors"
+                className="w-full text-center px-4 py-2 rounded-lg text-xs font-bold font-mono bg-[#2563EB] hover:bg-blue-600 text-white transition-colors"
               >
                 Launch Case 2 (Instant) →
+              </Link>
+            </div>
+          </div>
+
+          {/* Case 3 */}
+          <div className="p-6 rounded-2xl bg-[#151722] border border-[#222533] hover:border-[#38BDF8]/50 transition-all space-y-4 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold text-[#38BDF8] px-2 py-0.5 rounded bg-[#38BDF8]/20 border border-[#38BDF8]/40">
+                  Case 03 • Global Talent Visa
+                </span>
+                <span className="text-xs font-mono text-[#8E95A5]">3 Sources</span>
+              </div>
+              <h4 className="text-lg font-bold text-[#F8FAFC]">
+                UK Global Talent Visa 2026
+              </h4>
+              <p className="text-xs text-[#8E95A5] leading-relaxed">
+                Official GOV.UK guidance, tech solicitor portal, and legacy Tech Nation handbook. Features contradictory recommendation letter requirements (2 vs 3 letters), fee ambiguity, and unverified Stage 2 application deadlines.
+              </p>
+            </div>
+            <div className="pt-2 flex items-center gap-3">
+              <Link
+                href="/studio?demo=visa"
+                className="w-full text-center px-4 py-2 rounded-lg text-xs font-bold font-mono bg-[#38BDF8] hover:bg-sky-500 text-[#08080C] transition-colors"
+              >
+                Launch Case 3 (Instant) →
               </Link>
             </div>
           </div>
