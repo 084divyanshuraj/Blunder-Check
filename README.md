@@ -5,9 +5,12 @@
 [![Next.js 16](https://img.shields.io/badge/Next.js-16.4.3-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS v4](https://img.shields.io/badge/TailwindCSS-v4.0-06B6D4?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
-[![Tests](https://img.shields.io/badge/Vitest-52%2F52%20Passing-brightgreen?style=flat&logo=vitest)](https://vitest.dev/)
+[![Tests](https://img.shields.io/badge/Vitest-60%2F60%20Passing-brightgreen?style=flat&logo=vitest)](https://vitest.dev/)
 [![Gemini](https://img.shields.io/badge/Google%20Gemini-3.5%20Flash-orange?style=flat&logo=google)](https://ai.google.dev/)
-[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](https://vercel.com/)
+[![Vercel Deployment](https://img.shields.io/badge/Live%20Demo-blunder--check.vercel.app-success?style=flat&logo=vercel)](https://blunder-check.vercel.app/)
+
+**🔗 Live App:** [https://blunder-check.vercel.app/](https://blunder-check.vercel.app/)  
+**📂 Repository:** [https://github.com/084divyanshuraj/Blunder-Check](https://github.com/084divyanshuraj/Blunder-Check)
 
 Built for the **Shinchan Online Hackathon 2026**  
 **Problem Statement:** *"Digital Dark Spot: AI-Assisted Information Gap & Conflict Detection Platform"*
