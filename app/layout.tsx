@@ -15,7 +15,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Blunder Check — AI Information Gap Detection",
   description:
-    "Research like a chess engine: detect information gaps, conflicts, outdated claims and hanging risks before you act.",
+    "Research like a chess engine: find what the sources are NOT telling you. Detect conflicting claims, information dark spots, and evaluate decision safety.",
+  openGraph: {
+    title: "Blunder Check — AI Information Gap Detection",
+    description:
+      "Find what the sources aren't telling you. AI-assisted gap detection with programmatic quote verification and deterministic scoring.",
+    type: "website",
+    siteName: "Blunder Check",
+  },
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

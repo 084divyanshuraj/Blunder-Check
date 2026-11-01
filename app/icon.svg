@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="8" fill="#171a21"/>
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="#2a2f3a" stroke-width="1"/>
+  <!-- Chess Pawn / Knight icon in Emerald -->
+  <path d="M16 6a3.5 3.5 0 0 0-3.5 3.5c0 1.25.65 2.35 1.63 2.95-.73 1.25-1.63 3.3-1.63 5.55h7c0-2.25-.9-4.3-1.63-5.55.98-.6 1.63-1.7 1.63-2.95A3.5 3.5 0 0 0 16 6zM11 20v2h10v-2H11zm-2 4v2h14v-2H9z" fill="#7fa650"/>
+  <!-- Little warning dot for gap detection -->
+  <circle cx="23" cy="9" r="2.5" fill="#e5534b"/>
+</svg>
