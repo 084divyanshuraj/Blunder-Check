@@ -30,8 +30,8 @@ Rules for the client orchestrator (`lib/pipeline.ts`):
 
 ## 2. Common API rules
 - Body validated with the route's Zod schema. Invalid → `400`.
-- Errors: `{ "error": { "code": string, "message": string } }`. Codes: `invalid_request`, `source_unreachable`, `source_too_large`, `pdf_unreadable`, `ai_invalid_output`, `ai_unavailable`, `internal`.
-- Status codes: `400` bad input, `422` fetched/parsed OK but unusable (empty PDF, too little text), `502` upstream (Jina/Gemini) failure, `500` unexpected.
+- Errors: `{ "error": { "code": string, "message": string } }`. Codes: `invalid_request`, `source_unreachable`, `source_too_large`, `pdf_unreadable`, `ai_invalid_output`, `ai_unavailable`, `rate_limited`, `internal`.
+- Status codes: `400` bad input, `422` fetched/parsed OK but unusable (empty PDF, too little text), `429` rate limit exceeded (Retry-After header), `502` upstream (Jina/Gemini) failure, `500` unexpected.
 - Every route: `export const maxDuration = 60;` and `export const runtime = "nodejs";`.
 - Never log source text, keys or full prompts. Never return stack traces.
 

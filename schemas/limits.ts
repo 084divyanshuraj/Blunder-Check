@@ -12,6 +12,9 @@ export const LIMITS = {
   MAX_CLAIMS_PER_SOURCE: 25,
   MAX_QUESTION_CHARS: 500,
   MAX_TOTAL_CLAIMS: 150,
+  /** API Rate Limiting (per IP sliding window) */
+  RATE_LIMIT_WINDOW_MS: 60_000,
+  RATE_LIMIT_MAX_REQUESTS: 30,
 } as const;
 
 export const DISCLAIMER =

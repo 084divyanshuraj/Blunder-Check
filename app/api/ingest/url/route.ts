@@ -4,6 +4,7 @@ import { SourceIdSchema, type SourceRecord } from "@/schemas";
 import { fetchViaJina } from "@/lib/jina";
 import { truncateToLimit } from "@/lib/text";
 import { handleApiError } from "@/lib/api-response";
+import { checkApiRateLimit } from "@/lib/ratelimit";
 
 export const maxDuration = 60;
 
@@ -13,6 +14,9 @@ const UrlIngestRequestSchema = z.object({
 });
 
 export async function POST(req: Request) {
+  const rateLimited = checkApiRateLimit(req);
+  if (rateLimited) return rateLimited;
+
   try {
     const json = await req.json();
     const { sourceId, url } = UrlIngestRequestSchema.parse(json);

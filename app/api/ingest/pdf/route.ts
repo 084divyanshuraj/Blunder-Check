@@ -3,10 +3,14 @@ import { LIMITS, SourceIdSchema, type SourceRecord } from "@/schemas";
 import { extractPdfText, PdfError } from "@/lib/pdf";
 import { truncateToLimit } from "@/lib/text";
 import { handleApiError } from "@/lib/api-response";
+import { checkApiRateLimit } from "@/lib/ratelimit";
 
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
+  const rateLimited = checkApiRateLimit(req);
+  if (rateLimited) return rateLimited;
+
   try {
     const formData = await req.formData();
     const sourceIdRaw = formData.get("sourceId");
