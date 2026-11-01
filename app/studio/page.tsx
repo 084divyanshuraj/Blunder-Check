@@ -15,6 +15,8 @@ import { BlunderCard } from "@/components/chess/BlunderCard";
 import { MissedMoveCard } from "@/components/chess/MissedMoveCard";
 import { HangingPieceCard } from "@/components/chess/HangingPieceCard";
 import { CoverageOverview } from "@/components/analysis/CoverageOverview";
+import { BlunderReplay } from "@/components/chess/BlunderReplay";
+import { OpponentMode } from "@/components/chess/OpponentMode";
 import { EvidenceDrawer } from "@/components/evidence/EvidenceDrawer";
 import { DisclaimerFooter } from "@/components/common/DisclaimerFooter";
 
@@ -37,7 +39,13 @@ function StudioContent() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [selectedEvidence, setSelectedEvidence] = useState<EvidenceRef | null>(null);
   const [activeDashboardTab, setActiveDashboardTab] = useState<
-    "brief" | "blunders" | "darkspots" | "matrix" | "sources"
+    | "brief"
+    | "blunder_replay"
+    | "opponent"
+    | "blunders"
+    | "darkspots"
+    | "matrix"
+    | "sources"
   >("brief");
   const [copiedReport, setCopiedReport] = useState(false);
 
@@ -471,6 +479,36 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
 
                 <button
                   type="button"
+                  onClick={() => setActiveDashboardTab("blunder_replay")}
+                  className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 border-t-2 ${
+                    activeDashboardTab === "blunder_replay"
+                      ? "bg-[#151722] text-[#CCFF00] border-[#CCFF00]"
+                      : "text-[#8E95A5] hover:text-[#CCFF00] border-transparent"
+                  }`}
+                >
+                  <span>♟️ Blunder Replay</span>
+                  <span className="px-1.5 py-0.2 rounded font-mono text-[9px] bg-[#CCFF00]/15 text-[#CCFF00] font-extrabold uppercase">
+                    Simulate
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setActiveDashboardTab("opponent")}
+                  className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 border-t-2 ${
+                    activeDashboardTab === "opponent"
+                      ? "bg-[#151722] text-[#EF4444] border-[#EF4444]"
+                      : "text-[#8E95A5] hover:text-[#EF4444] border-transparent"
+                  }`}
+                >
+                  <span>⚔️ Opponent Mode</span>
+                  <span className="px-1.5 py-0.2 rounded font-mono text-[9px] bg-[#EF4444]/20 text-[#EF4444] font-extrabold uppercase">
+                    Attack
+                  </span>
+                </button>
+
+                <button
+                  type="button"
                   onClick={() => setActiveDashboardTab("blunders")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "blunders"
@@ -586,8 +624,55 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                       </div>
                     )}
                   </div>
+
+                  {/* WOW Feature Quick-Access Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div
+                      onClick={() => setActiveDashboardTab("blunder_replay")}
+                      className="p-4 rounded-xl bg-[#151722] hover:bg-[#1C1F2E] border border-[#CCFF00]/30 hover:border-[#CCFF00]/60 transition-all cursor-pointer space-y-1.5 shadow-sm group select-none"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono font-bold text-[#CCFF00] flex items-center gap-1.5">
+                          <span>♟️ Blunder Replay Simulator</span>
+                        </span>
+                        <span className="text-[10px] font-mono text-[#CCFF00] group-hover:translate-x-0.5 transition-transform">
+                          Simulate →
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-300">
+                        Test what happens when you fix conflicting deadlines or close dark spots. Watch your Information Position recover in real-time.
+                      </p>
+                    </div>
+
+                    <div
+                      onClick={() => setActiveDashboardTab("opponent")}
+                      className="p-4 rounded-xl bg-[#151722] hover:bg-[#1C1F2E] border border-[#EF4444]/35 hover:border-[#EF4444]/65 transition-all cursor-pointer space-y-1.5 shadow-sm group select-none"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono font-bold text-[#EF4444] flex items-center gap-1.5">
+                          <span>⚔️ Opponent Attack Mode</span>
+                        </span>
+                        <span className="text-[10px] font-mono text-[#EF4444] group-hover:translate-x-0.5 transition-transform">
+                          Enter Battle →
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-300">
+                        Face a ruthless evaluator looking for excuses to disqualify you using the exact blind spots uncovered in this audit.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
+            )}
+
+            {/* TAB CONTENT: Blunder Replay Simulator */}
+            {activeDashboardTab === "blunder_replay" && (
+              <BlunderReplay analysis={analysis} />
+            )}
+
+            {/* TAB CONTENT: Opponent Attack Mode */}
+            {activeDashboardTab === "opponent" && (
+              <OpponentMode analysis={analysis} />
             )}
 
             {/* TAB CONTENT 2: Blunders & Contradictions */}
