@@ -8,17 +8,17 @@ interface HangingPieceCardProps {
 
 export function HangingPieceCard({ piece }: HangingPieceCardProps) {
   return (
-    <div className="bg-[#18263B] rounded-xl p-4 border border-[#2563EB]/40 hover:border-[#38BDF8]/60 transition-all flex items-start justify-between gap-3 shadow-md">
+    <div className="bg-[#151722] rounded-xl p-4 border border-[#2563EB]/30 hover:border-[#3B82F6]/50 transition-all flex items-start justify-between gap-3 shadow-md">
       <div className="space-y-1.5 flex-1">
         <div className="flex items-center gap-2">
-          <span className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#2563EB]/20 text-[#38BDF8] border border-[#2563EB]/40">
+          <span className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#2563EB]/15 text-[#3B82F6] border border-[#2563EB]/30">
             ◎ Hanging Piece
           </span>
           <span
-            className={`text-[10px] px-1.5 py-0.5 rounded uppercase font-bold ${
+            className={`text-[10px] px-1.5 py-0.5 rounded uppercase font-bold font-mono ${
               piece.impact === "high"
-                ? "bg-[#EF4444]/20 text-[#EF4444]"
-                : "bg-[#F59E0B]/20 text-[#F59E0B]"
+                ? "bg-[#EF4444]/15 text-[#EF4444]"
+                : "bg-[#F59E0B]/15 text-[#F59E0B]"
             }`}
           >
             {piece.impact} risk

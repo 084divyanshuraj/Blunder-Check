@@ -21,10 +21,10 @@ export function EvaluationBar({ score, className = "" }: EvaluationBarProps) {
       aria-label={`Information Position ${formattedScore} of range -5 to +5`}
     >
       {/* Desktop Vertical Eval Bar */}
-      <div className="relative w-8 h-[340px] rounded-full overflow-hidden bg-[#111C2E] border border-[#263449] shadow-inner hidden md:flex flex-col justify-end">
+      <div className="relative w-8 h-[340px] rounded-full overflow-hidden bg-[#0F1017] border border-[#222533] shadow-inner hidden md:flex flex-col justify-end">
         {/* Zero baseline tick */}
         <div
-          className="absolute left-0 right-0 h-[2px] bg-white/20 z-10 pointer-events-none"
+          className="absolute left-0 right-0 h-[2px] bg-white/25 z-10 pointer-events-none"
           style={{ bottom: "50%" }}
           title="Neutral (0.0)"
         />
@@ -32,7 +32,7 @@ export function EvaluationBar({ score, className = "" }: EvaluationBarProps) {
         {/* Animated fill rising from bottom */}
         <motion.div
           className={`w-full rounded-b-full transition-colors duration-300 ${
-            isPositive ? "bg-[#14B8A6]" : "bg-[#EF4444]"
+            isPositive ? "bg-[#CCFF00] shadow-[0_0_16px_rgba(204,255,0,0.35)]" : "bg-[#EF4444] shadow-[0_0_16px_rgba(239,68,68,0.35)]"
           }`}
           initial={{ height: shouldReduceMotion ? `${fillPercent}%` : "50%" }}
           animate={{ height: `${fillPercent}%` }}
@@ -45,7 +45,9 @@ export function EvaluationBar({ score, className = "" }: EvaluationBarProps) {
 
         {/* Dynamic score label positioned near boundary */}
         <div
-          className="absolute left-0 right-0 flex justify-center text-[11px] font-bold font-mono tracking-tight text-white drop-shadow-md z-20 pointer-events-none transition-all duration-300"
+          className={`absolute left-0 right-0 flex justify-center text-[11px] font-black font-mono tracking-tight drop-shadow-md z-20 pointer-events-none transition-all duration-300 ${
+            isPositive ? "text-[#08080C]" : "text-white"
+          }`}
           style={{
             bottom:
               fillPercent >= 50
@@ -58,14 +60,14 @@ export function EvaluationBar({ score, className = "" }: EvaluationBarProps) {
       </div>
 
       {/* Mobile Horizontal Bar */}
-      <div className="md:hidden w-full h-7 rounded-full overflow-hidden bg-[#111C2E] border border-[#263449] relative flex items-center">
+      <div className="md:hidden w-full h-7 rounded-full overflow-hidden bg-[#0F1017] border border-[#222533] relative flex items-center">
         <div
-          className="absolute top-0 bottom-0 w-[2px] bg-white/20 z-10"
+          className="absolute top-0 bottom-0 w-[2px] bg-white/25 z-10"
           style={{ left: "50%" }}
         />
 
         <motion.div
-          className={`h-full ${isPositive ? "bg-[#14B8A6]" : "bg-[#EF4444]"}`}
+          className={`h-full ${isPositive ? "bg-[#CCFF00]" : "bg-[#EF4444]"}`}
           initial={{ width: shouldReduceMotion ? `${fillPercent}%` : "50%" }}
           animate={{ width: `${fillPercent}%` }}
           transition={{
@@ -75,13 +77,17 @@ export function EvaluationBar({ score, className = "" }: EvaluationBarProps) {
           }}
         />
 
-        <span className="absolute inset-0 flex items-center justify-center text-xs font-bold font-mono text-white drop-shadow">
+        <span
+          className={`absolute inset-0 flex items-center justify-center text-xs font-black font-mono ${
+            isPositive ? "text-[#08080C]" : "text-white"
+          }`}
+        >
           {formattedScore}
         </span>
       </div>
 
-      <div className="mt-2 text-[10px] text-[#94A3B8] font-mono uppercase tracking-wider text-center">
-        Eval Bar
+      <div className="mt-2 text-[10px] font-mono uppercase tracking-wider text-[#8E95A5] text-center hidden md:block">
+        Pos
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export function EvidenceStatus({ label, className = "" }: EvidenceStatusProps) {
     case "sourced":
       return (
         <span
-          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-[#14B8A6]/15 text-[#14B8A6] border border-[#14B8A6]/40 ${className}`}
+          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold font-mono bg-[#CCFF00]/10 text-[#CCFF00] border border-[#CCFF00]/30 shadow-xs ${className}`}
           title="Directly verified against source quotation"
         >
           <span className="text-[11px] font-bold">✓</span>
@@ -22,7 +22,7 @@ export function EvidenceStatus({ label, className = "" }: EvidenceStatusProps) {
     case "ai_inferred":
       return (
         <span
-          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/40 ${className}`}
+          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold font-mono bg-[#2563EB]/15 text-[#60A5FA] border border-[#2563EB]/40 ${className}`}
           title="Potential signal inferred by AI from reviewed material"
         >
           <span className="text-[11px]">✦</span>
@@ -34,7 +34,7 @@ export function EvidenceStatus({ label, className = "" }: EvidenceStatusProps) {
     default:
       return (
         <span
-          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-[#1F304B] text-[#94A3B8] border border-[#263449] ${className}`}
+          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold font-mono bg-[#151722] text-[#8E95A5] border border-[#222533] ${className}`}
           title="Not established by the reviewed sources"
         >
           <span className="text-[11px] font-bold">?</span>

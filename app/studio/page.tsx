@@ -162,36 +162,36 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
   const totalChars = sources.reduce((acc, s) => acc + s.charCount, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B1220] text-[#F8FAFC]">
-      {/* Enterprise SaaS Navbar */}
-      <header className="border-b border-[#263449] bg-[#111C2E]/95 backdrop-blur-md sticky top-0 z-40">
+    <div className="min-h-screen flex flex-col bg-[#08080C] text-[#F8FAFC]">
+      {/* Precision Cockpit Navbar */}
+      <header className="border-b border-[#222533] bg-[#0F1017]/95 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="text-xs text-[#94A3B8] hover:text-[#38BDF8] transition-colors flex items-center gap-1 font-mono py-1 px-2 rounded hover:bg-[#18263B]"
+              className="text-xs text-[#8E95A5] hover:text-[#CCFF00] transition-colors flex items-center gap-1 font-mono py-1 px-2 rounded hover:bg-[#151722]"
               title="Return to Product Overview"
             >
               <span>←</span>
               <span className="hidden sm:inline">Product Tour</span>
             </Link>
             
-            <div className="h-5 w-[1px] bg-[#263449]" />
+            <div className="h-5 w-[1px] bg-[#222533]" />
 
             <div className="flex items-center gap-2.5">
-              <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#14B8A6] flex items-center justify-center text-lg shadow-md shadow-[#2563EB]/20">
-                ♟️
+              <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#CCFF00] flex items-center justify-center text-lg shadow-md shadow-[#2563EB]/20 text-[#08080C] font-black">
+                ♟
               </div>
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-base font-extrabold tracking-tight text-[#F8FAFC]">
                     Blunder Check
                   </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#14B8A6]/15 text-[#14B8A6] border border-[#14B8A6]/30 font-semibold uppercase">
-                    Decision Studio
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] border border-[#CCFF00]/30 font-semibold uppercase">
+                    Decision Cockpit
                   </span>
                 </div>
-                <p className="text-[11px] text-[#94A3B8] hidden sm:block">
+                <p className="text-[11px] text-[#8E95A5] hidden sm:block font-mono">
                   Evidence-Gap &amp; Conflict Detection Workspace
                 </p>
               </div>
@@ -205,7 +205,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                 <button
                   type="button"
                   onClick={handleCopyAnalysisSummary}
-                  className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#18263B] hover:bg-[#1F304B] text-[#94A3B8] hover:text-[#F8FAFC] border border-[#263449] transition-colors flex items-center gap-1.5 cursor-pointer"
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold font-mono bg-[#151722] hover:bg-[#1C1F2E] text-[#8E95A5] hover:text-[#F8FAFC] border border-[#222533] transition-colors flex items-center gap-1.5 cursor-pointer"
                   title="Copy executive analysis summary to clipboard"
                 >
                   <span>{copiedReport ? "✓ Copied" : "📋 Share"}</span>
@@ -213,21 +213,21 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#2563EB] hover:bg-blue-600 text-white shadow-md shadow-[#2563EB]/25 transition-all cursor-pointer flex items-center gap-1"
+                  className="px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono bg-[#2563EB] hover:bg-blue-600 text-white shadow-md shadow-[#2563EB]/25 transition-all cursor-pointer flex items-center gap-1"
                 >
                   <span>+</span>
                   <span className="hidden sm:inline">New Research</span>
                 </button>
               </div>
             ) : (
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] text-[#94A3B8] font-mono hidden md:inline">
+              <div className="flex items-center gap-2 font-mono">
+                <span className="text-[11px] text-[#8E95A5] hidden md:inline">
                   Instant Demos:
                 </span>
                 <button
                   type="button"
                   onClick={() => handleLoadDemo("scholarship", true)}
-                  className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#18263B] hover:bg-[#1F304B] text-[#14B8A6] border border-[#14B8A6]/30 hover:border-[#14B8A6]/60 transition-colors cursor-pointer flex items-center gap-1"
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#151722] hover:bg-[#1C1F2E] text-[#CCFF00] border border-[#CCFF00]/30 hover:border-[#CCFF00]/60 transition-colors cursor-pointer flex items-center gap-1"
                 >
                   <span>🏆</span>
                   <span>Scholarship</span>
@@ -235,7 +235,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                 <button
                   type="button"
                   onClick={() => handleLoadDemo("hostel", true)}
-                  className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#18263B] hover:bg-[#1F304B] text-[#38BDF8] border border-[#2563EB]/40 hover:border-[#38BDF8]/60 transition-colors cursor-pointer flex items-center gap-1"
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#151722] hover:bg-[#1C1F2E] text-[#60A5FA] border border-[#2563EB]/40 hover:border-[#3B82F6]/60 transition-colors cursor-pointer flex items-center gap-1"
                 >
                   <span>🏠</span>
                   <span>Hostel</span>
@@ -250,7 +250,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-6">
         {/* Error notification */}
         {errorMsg && (
-          <div className="max-w-4xl mx-auto p-4 rounded-xl bg-[#EF4444]/15 border border-[#EF4444]/40 text-[#EF4444] text-xs flex items-center justify-between gap-3 shadow-lg">
+          <div className="max-w-4xl mx-auto p-4 rounded-xl bg-[#EF4444]/15 border border-[#EF4444]/30 text-[#EF4444] text-xs flex items-center justify-between gap-3 shadow-lg font-mono">
             <div>
               <span className="font-bold">Notice:</span> {errorMsg}
             </div>
@@ -286,31 +286,31 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
         {!isAnalyzing && analysis && (
           <div className="space-y-6 animate-in fade-in duration-300">
             {/* Header: Topic & Goal Banner */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-[#18263B] border border-[#263449] shadow-xl space-y-3">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#151722] border border-[#222533] shadow-xl space-y-3">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-mono text-[#38BDF8] uppercase tracking-wider font-bold">
+                  <span className="text-[11px] font-mono text-[#3B82F6] uppercase tracking-wider font-bold">
                     Research Target Under Audit
                   </span>
                   {analysis.mode === "demo_cached" ? (
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#14B8A6]/20 text-[#14B8A6] border border-[#14B8A6]/40 font-semibold">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] border border-[#CCFF00]/30 font-semibold">
                       ✓ Preloaded Case Study
                     </span>
                   ) : (
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#2563EB]/20 text-[#38BDF8] border border-[#2563EB]/40 font-semibold">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#2563EB]/20 text-[#60A5FA] border border-[#2563EB]/40 font-semibold">
                       Live AI Run
                     </span>
                   )}
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-[#94A3B8] font-mono">
+                  <span className="text-xs text-[#8E95A5] font-mono">
                     {sources.length} sources ({totalChars.toLocaleString()} chars)
                   </span>
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="px-3 py-1 rounded-lg text-xs font-medium bg-[#111C2E] hover:bg-[#1F304B] text-[#94A3B8] hover:text-[#F8FAFC] border border-[#263449] transition-colors cursor-pointer"
+                    className="px-3 py-1 rounded-lg text-xs font-mono font-medium bg-[#0F1017] hover:bg-[#1C1F2E] text-[#8E95A5] hover:text-[#F8FAFC] border border-[#222533] transition-colors cursor-pointer"
                   >
                     Edit Input
                   </button>
@@ -321,35 +321,34 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                 <h1 className="text-xl sm:text-2xl font-black text-[#F8FAFC] tracking-tight">
                   {analysis.question}
                 </h1>
-                <p className="text-xs sm:text-sm text-[#94A3B8] flex items-center gap-1.5">
+                <p className="text-xs sm:text-sm text-[#8E95A5] flex items-center gap-1.5">
                   <span className="font-semibold text-[#F8FAFC]">Stated Goal:</span>
                   <span>{analysis.goal}</span>
                 </p>
               </div>
 
               {/* Source chips */}
-              <div className="flex flex-wrap gap-2 pt-2 border-t border-[#263449]/70">
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-[#222533]">
                 {sources.map((s) => (
                   <button
                     key={s.id}
                     type="button"
                     onClick={() => {
-                      // find first evidence from this source if any
                       const firstEv = analysis.result.blunders
                         .flatMap((b) => b.evidence)
                         .find((e) => e.sourceId === s.id);
                       if (firstEv) setSelectedEvidence(firstEv);
                     }}
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#111C2E] border border-[#263449] text-xs hover:border-[#14B8A6]/50 transition-colors text-left"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#0F1017] border border-[#222533] text-xs hover:border-[#CCFF00]/50 transition-colors text-left"
                     title={`Click to inspect ${s.title}`}
                   >
-                    <span className="font-mono font-bold text-[10px] text-[#14B8A6]">
+                    <span className="font-mono font-bold text-[10px] text-[#CCFF00]">
                       {s.id.toUpperCase()}
                     </span>
                     <span className="text-slate-300 max-w-[180px] truncate">
                       {s.title}
                     </span>
-                    <span className="text-[10px] text-[#94A3B8] font-mono">
+                    <span className="text-[10px] text-[#8E95A5] font-mono">
                       ({s.charCount} chars)
                     </span>
                   </button>
@@ -360,8 +359,8 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
             {/* Metric KPI Cards (Top Dashboard Metrics) */}
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-3.5">
               {/* Card 1: Score */}
-              <div className="p-4 rounded-xl bg-[#18263B] border border-[#263449] space-y-1">
-                <span className="text-[10px] font-mono uppercase text-[#94A3B8] tracking-wider font-semibold">
+              <div className="p-4 rounded-xl bg-[#151722] border border-[#222533] space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#8E95A5] tracking-wider font-semibold">
                   Information Position
                 </span>
                 <div className="flex items-baseline gap-2">
@@ -369,11 +368,11 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                     {analysis.result.score.value >= 0 ? "+" : ""}
                     {analysis.result.score.value.toFixed(1)}
                   </span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded font-mono font-bold bg-[#14B8A6]/20 text-[#14B8A6]">
+                  <span className="text-[10px] px-1.5 py-0.5 rounded font-mono font-bold bg-[#CCFF00]/10 text-[#CCFF00]">
                     / 5.0
                   </span>
                 </div>
-                <div className="text-[11px] text-[#94A3B8] truncate">
+                <div className="text-[11px] text-[#8E95A5] font-mono truncate">
                   {analysis.result.score.value >= 3.0
                     ? "Well Established"
                     : analysis.result.score.value >= 0.5
@@ -383,25 +382,25 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
               </div>
 
               {/* Card 2: Coverage */}
-              <div className="p-4 rounded-xl bg-[#18263B] border border-[#263449] space-y-1">
-                <span className="text-[10px] font-mono uppercase text-[#94A3B8] tracking-wider font-semibold">
+              <div className="p-4 rounded-xl bg-[#151722] border border-[#222533] space-y-1">
+                <span className="text-[10px] font-mono uppercase text-[#8E95A5] tracking-wider font-semibold">
                   Requirement Coverage
                 </span>
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl sm:text-3xl font-black font-mono text-[#F8FAFC]">
                     {(analysis.result.score.coverage * 100).toFixed(0)}%
                   </span>
-                  <span className="text-[10px] text-[#38BDF8] font-mono">
+                  <span className="text-[10px] text-[#3B82F6] font-mono">
                     {analysis.result.coverage.filter((c) => c.status === "covered").length}/{analysis.result.coverage.length}
                   </span>
                 </div>
-                <div className="text-[11px] text-[#94A3B8]">
+                <div className="text-[11px] text-[#8E95A5]">
                   Critical Needs Satisfied
                 </div>
               </div>
 
               {/* Card 3: Blunders */}
-              <div className="p-4 rounded-xl bg-[#18263B] border border-[#EF4444]/30 space-y-1">
+              <div className="p-4 rounded-xl bg-[#151722] border border-[#EF4444]/35 space-y-1">
                 <span className="text-[10px] font-mono uppercase text-[#EF4444] tracking-wider font-semibold">
                   ?? Blunders &amp; Conflicts
                 </span>
@@ -413,13 +412,13 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                     Discrepancies
                   </span>
                 </div>
-                <div className="text-[11px] text-[#94A3B8]">
+                <div className="text-[11px] text-[#8E95A5]">
                   Direct Fact Clashes
                 </div>
               </div>
 
               {/* Card 4: Dark Spots */}
-              <div className="p-4 rounded-xl bg-[#18263B] border border-[#F59E0B]/30 space-y-1">
+              <div className="p-4 rounded-xl bg-[#151722] border border-[#F59E0B]/35 space-y-1">
                 <span className="text-[10px] font-mono uppercase text-[#F59E0B] tracking-wider font-semibold">
                   ?! Dark Spots
                 </span>
@@ -431,43 +430,43 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                     Gaps
                   </span>
                 </div>
-                <div className="text-[11px] text-[#94A3B8]">
+                <div className="text-[11px] text-[#8E95A5]">
                   Zero Mentions in Sources
                 </div>
               </div>
 
               {/* Card 5: Quotes Verified */}
-              <div className="p-4 rounded-xl bg-[#18263B] border border-[#14B8A6]/30 space-y-1 col-span-2 lg:col-span-1">
-                <span className="text-[10px] font-mono uppercase text-[#14B8A6] tracking-wider font-semibold">
+              <div className="p-4 rounded-xl bg-[#151722] border border-[#CCFF00]/30 space-y-1 col-span-2 lg:col-span-1">
+                <span className="text-[10px] font-mono uppercase text-[#CCFF00] tracking-wider font-semibold">
                   Quote Verification
                 </span>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl sm:text-3xl font-black font-mono text-[#14B8A6]">
+                  <span className="text-2xl sm:text-3xl font-black font-mono text-[#CCFF00]">
                     100%
                   </span>
-                  <span className="text-[10px] text-[#14B8A6] font-mono">
+                  <span className="text-[10px] text-[#CCFF00] font-mono">
                     Substrings
                   </span>
                 </div>
-                <div className="text-[11px] text-[#94A3B8]">
+                <div className="text-[11px] text-[#8E95A5]">
                   Programmatic Proof
                 </div>
               </div>
             </div>
 
             {/* Dashboard Tabs Segmented Control */}
-            <div className="border-b border-[#263449] flex items-center justify-between overflow-x-auto pb-0.5">
-              <nav className="flex items-center gap-1 sm:gap-2">
+            <div className="border-b border-[#222533] flex items-center justify-between overflow-x-auto pb-0.5">
+              <nav className="flex items-center gap-1 sm:gap-2 font-mono">
                 <button
                   type="button"
                   onClick={() => setActiveDashboardTab("brief")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "brief"
-                      ? "bg-[#18263B] text-[#38BDF8] border-[#38BDF8]"
-                      : "text-[#94A3B8] hover:text-[#F8FAFC] border-transparent"
+                      ? "bg-[#151722] text-[#3B82F6] border-[#3B82F6]"
+                      : "text-[#8E95A5] hover:text-[#F8FAFC] border-transparent"
                   }`}
                 >
-                  <span>♟️ Executive Position &amp; Best Moves</span>
+                  <span>♟ Position &amp; Best Moves</span>
                 </button>
 
                 <button
@@ -475,8 +474,8 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                   onClick={() => setActiveDashboardTab("blunders")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "blunders"
-                      ? "bg-[#18263B] text-[#EF4444] border-[#EF4444]"
-                      : "text-[#94A3B8] hover:text-[#F8FAFC] border-transparent"
+                      ? "bg-[#151722] text-[#EF4444] border-[#EF4444]"
+                      : "text-[#8E95A5] hover:text-[#F8FAFC] border-transparent"
                   }`}
                 >
                   <span>⚠️ Blunders &amp; Contradictions</span>
@@ -490,8 +489,8 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                   onClick={() => setActiveDashboardTab("darkspots")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "darkspots"
-                      ? "bg-[#18263B] text-[#F59E0B] border-[#F59E0B]"
-                      : "text-[#94A3B8] hover:text-[#F8FAFC] border-transparent"
+                      ? "bg-[#151722] text-[#F59E0B] border-[#F59E0B]"
+                      : "text-[#8E95A5] hover:text-[#F8FAFC] border-transparent"
                   }`}
                 >
                   <span>🌑 Digital Dark Spots</span>
@@ -505,8 +504,8 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                   onClick={() => setActiveDashboardTab("matrix")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "matrix"
-                      ? "bg-[#18263B] text-[#14B8A6] border-[#14B8A6]"
-                      : "text-[#94A3B8] hover:text-[#F8FAFC] border-transparent"
+                      ? "bg-[#151722] text-[#CCFF00] border-[#CCFF00]"
+                      : "text-[#8E95A5] hover:text-[#F8FAFC] border-transparent"
                   }`}
                 >
                   <span>📋 Coverage Matrix</span>
@@ -517,8 +516,8 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                   onClick={() => setActiveDashboardTab("sources")}
                   className={`px-3.5 py-2.5 rounded-t-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border-t-2 ${
                     activeDashboardTab === "sources"
-                      ? "bg-[#18263B] text-[#38BDF8] border-[#38BDF8]"
-                      : "text-[#94A3B8] hover:text-[#F8FAFC] border-transparent"
+                      ? "bg-[#151722] text-[#3B82F6] border-[#3B82F6]"
+                      : "text-[#8E95A5] hover:text-[#F8FAFC] border-transparent"
                   }`}
                 >
                   <span>📂 Evidence Sources ({sources.length})</span>
@@ -548,7 +547,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                   {/* Highlights overview: top blunder and top dark spot summary */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {analysis.result.blunders[0] && (
-                      <div className="p-4 rounded-xl bg-[#18263B] border border-[#EF4444]/40 space-y-2">
+                      <div className="p-4 rounded-xl bg-[#151722] border border-[#EF4444]/35 space-y-2">
                         <div className="flex items-center justify-between">
                           <span className="text-xs font-mono font-bold text-[#EF4444]">
                             ?? Top Blunder Detected
@@ -556,7 +555,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                           <button
                             type="button"
                             onClick={() => setActiveDashboardTab("blunders")}
-                            className="text-xs text-[#38BDF8] hover:underline font-mono"
+                            className="text-xs text-[#3B82F6] hover:underline font-mono"
                           >
                             View all →
                           </button>
@@ -568,7 +567,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                     )}
 
                     {analysis.result.missedMoves[0] && (
-                      <div className="p-4 rounded-xl bg-[#18263B] border border-[#F59E0B]/40 space-y-2">
+                      <div className="p-4 rounded-xl bg-[#151722] border border-[#F59E0B]/35 space-y-2">
                         <div className="flex items-center justify-between">
                           <span className="text-xs font-mono font-bold text-[#F59E0B]">
                             ?! Top Dark Spot Discovered
@@ -576,7 +575,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                           <button
                             type="button"
                             onClick={() => setActiveDashboardTab("darkspots")}
-                            className="text-xs text-[#38BDF8] hover:underline font-mono"
+                            className="text-xs text-[#3B82F6] hover:underline font-mono"
                           >
                             View all →
                           </button>
@@ -594,7 +593,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
             {/* TAB CONTENT 2: Blunders & Contradictions */}
             {activeDashboardTab === "blunders" && (
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-[#18263B] border border-[#263449] flex items-center justify-between">
+                <div className="p-4 rounded-xl bg-[#151722] border border-[#222533] flex items-center justify-between">
                   <div>
                     <h3 className="text-sm font-bold text-[#F8FAFC] flex items-center gap-2">
                       <span className="text-[#EF4444]">?? Blunders &amp; Conflicting Claims</span>
@@ -602,14 +601,14 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                         {analysis.result.blunders.length}
                       </span>
                     </h3>
-                    <p className="text-xs text-[#94A3B8] mt-0.5">
+                    <p className="text-xs text-[#8E95A5] mt-0.5">
                       Contradictory dates, conflicting amounts, or outdated cycle details between sources. Click any quote to inspect verbatim document context.
                     </p>
                   </div>
                 </div>
 
                 {analysis.result.blunders.length === 0 ? (
-                  <div className="p-8 rounded-xl bg-[#18263B] border border-[#263449] text-xs text-[#94A3B8] text-center">
+                  <div className="p-8 rounded-xl bg-[#151722] border border-[#222533] text-xs text-[#8E95A5] text-center font-mono">
                     ✓ No blunders or direct contradictions detected across the reviewed sources.
                   </div>
                 ) : (
@@ -628,7 +627,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
             {/* TAB CONTENT 3: Digital Dark Spots */}
             {activeDashboardTab === "darkspots" && (
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-[#18263B] border border-[#263449] flex items-center justify-between">
+                <div className="p-4 rounded-xl bg-[#151722] border border-[#222533] flex items-center justify-between">
                   <div>
                     <h3 className="text-sm font-bold text-[#F8FAFC] flex items-center gap-2">
                       <span className="text-[#F59E0B]">🌑 Digital Dark Spots (Missing Requirements)</span>
@@ -636,14 +635,14 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                         {analysis.result.missedMoves.length}
                       </span>
                     </h3>
-                    <p className="text-xs text-[#94A3B8] mt-0.5">
+                    <p className="text-xs text-[#8E95A5] mt-0.5">
                       Decision requirements that zero reviewed sources answered. These represent critical blind spots where assumptions lead to costly failures.
                     </p>
                   </div>
                 </div>
 
                 {analysis.result.missedMoves.length === 0 ? (
-                  <div className="p-8 rounded-xl bg-[#18263B] border border-[#263449] text-xs text-[#94A3B8] text-center">
+                  <div className="p-8 rounded-xl bg-[#151722] border border-[#222533] text-xs text-[#8E95A5] text-center font-mono">
                     ✓ All expected checklist items were adequately covered by the reviewed sources.
                   </div>
                 ) : (
@@ -658,8 +657,8 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                 {analysis.result.hangingPieces.length > 0 && (
                   <div className="space-y-3 pt-4">
                     <h4 className="text-sm font-bold text-[#F8FAFC] flex items-center gap-2">
-                      <span className="text-[#38BDF8]">◎ Hanging Pieces (High-Impact Latent Risks)</span>
-                      <span className="text-xs font-mono px-2 py-0.5 rounded bg-[#2563EB]/20 text-[#38BDF8] font-semibold">
+                      <span className="text-[#3B82F6]">◎ Hanging Pieces (High-Impact Latent Risks)</span>
+                      <span className="text-xs font-mono px-2 py-0.5 rounded bg-[#2563EB]/20 text-[#60A5FA] font-semibold">
                         {analysis.result.hangingPieces.length}
                       </span>
                     </h4>
@@ -690,12 +689,12 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
             {/* TAB CONTENT 5: Evidence Sources */}
             {activeDashboardTab === "sources" && (
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-[#18263B] border border-[#263449] flex items-center justify-between">
+                <div className="p-4 rounded-xl bg-[#151722] border border-[#222533] flex items-center justify-between">
                   <div>
                     <h3 className="text-sm font-bold text-[#F8FAFC]">
                       Ingested Source Documents ({sources.length})
                     </h3>
-                    <p className="text-xs text-[#94A3B8] mt-0.5">
+                    <p className="text-xs text-[#8E95A5] mt-0.5">
                       All sources cleaned and delimited for analysis. Click any source to inspect its raw text.
                     </p>
                   </div>
@@ -705,25 +704,25 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                   {sources.map((s) => (
                     <div
                       key={s.id}
-                      className="p-4 rounded-xl bg-[#18263B] border border-[#263449] space-y-3"
+                      className="p-4 rounded-xl bg-[#151722] border border-[#222533] space-y-3"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <span className="font-mono text-xs font-bold text-[#14B8A6] px-2 py-0.5 rounded bg-[#14B8A6]/15 border border-[#14B8A6]/30">
+                          <span className="font-mono text-xs font-bold text-[#CCFF00] px-2 py-0.5 rounded bg-[#CCFF00]/10 border border-[#CCFF00]/30">
                             {s.id.toUpperCase()}
                           </span>
                           <span className="text-xs font-semibold text-[#F8FAFC] truncate max-w-[220px]">
                             {s.title}
                           </span>
                         </div>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#111C2E] text-[#94A3B8] border border-[#263449]">
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0F1017] text-[#8E95A5] border border-[#222533]">
                           {s.kind.toUpperCase()}
                         </span>
                       </div>
 
-                      <div className="text-xs text-[#94A3B8] flex items-center justify-between font-mono">
+                      <div className="text-xs text-[#8E95A5] flex items-center justify-between font-mono">
                         <span>Size: {s.charCount.toLocaleString()} chars</span>
-                        <span className="text-[#14B8A6]">Status: {s.status}</span>
+                        <span className="text-[#CCFF00]">Status: {s.status}</span>
                       </div>
 
                       {s.dateSignals && s.dateSignals.length > 0 && (
@@ -732,7 +731,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                         </div>
                       )}
 
-                      <div className="p-2.5 rounded bg-[#111C2E] border border-[#263449] text-xs font-mono text-slate-300 max-h-36 overflow-y-auto">
+                      <div className="p-2.5 rounded bg-[#0F1017] border border-[#222533] text-xs font-mono text-slate-300 max-h-36 overflow-y-auto">
                         <pre className="whitespace-pre-wrap font-sans text-xs line-clamp-6">
                           {s.text}
                         </pre>
@@ -753,7 +752,7 @@ ${analysis.result.verifyNext.map((v, i) => `${i + 1}. [${v.priority.toUpperCase(
                             },
                           });
                         }}
-                        className="text-xs text-[#38BDF8] hover:underline font-semibold block"
+                        className="text-xs text-[#3B82F6] hover:text-[#CCFF00] hover:underline font-semibold font-mono block"
                       >
                         Inspect in Full Document Viewer →
                       </button>
@@ -783,10 +782,10 @@ export default function StudioPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#0B1220] flex items-center justify-center text-sm font-mono text-[#94A3B8]">
+        <div className="min-h-screen bg-[#08080C] flex items-center justify-center text-sm font-mono text-[#8E95A5]">
           <div className="flex items-center gap-2">
-            <span className="animate-spin">♟️</span>
-            <span>Initializing Decision Studio...</span>
+            <span className="animate-spin text-[#CCFF00]">♟</span>
+            <span>Initializing Decision Cockpit...</span>
           </div>
         </div>
       }

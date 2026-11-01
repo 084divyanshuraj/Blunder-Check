@@ -19,18 +19,18 @@ export function BlunderCard({
   const sourceMap = new Map(sources.map((s) => [s.id, s]));
 
   return (
-    <div className="bg-[#18263B] rounded-xl p-5 border border-[#EF4444]/40 hover:border-[#EF4444]/70 transition-all shadow-md space-y-4">
+    <div className="bg-[#151722] rounded-xl p-5 border border-[#EF4444]/35 hover:border-[#EF4444]/60 transition-all shadow-md space-y-4">
       {/* Header */}
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-2">
-          <span className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#EF4444]/20 text-[#EF4444] border border-[#EF4444]/40">
+          <span className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[#EF4444]/15 text-[#EF4444] border border-[#EF4444]/30">
             ?? Blunder
           </span>
-          <span className="text-xs uppercase tracking-wider font-semibold text-[#94A3B8]">
+          <span className="text-xs uppercase tracking-wider font-semibold font-mono text-[#8E95A5]">
             {isConflict ? "Conflicting Claims" : "Outdated Information"}
           </span>
           <span
-            className={`text-[10px] px-1.5 py-0.5 rounded uppercase font-bold ${
+            className={`text-[10px] px-1.5 py-0.5 rounded uppercase font-bold font-mono ${
               blunder.severity === "high"
                 ? "bg-[#EF4444]/20 text-[#EF4444]"
                 : "bg-[#F59E0B]/20 text-[#F59E0B]"
@@ -48,8 +48,8 @@ export function BlunderCard({
       </p>
 
       {/* Evidence Side-by-Side Grid */}
-      <div className="pt-2 border-t border-[#263449]">
-        <div className="text-[11px] font-mono text-[#94A3B8] uppercase tracking-wider mb-2 font-bold">
+      <div className="pt-2 border-t border-[#222533]">
+        <div className="text-[11px] font-mono text-[#8E95A5] uppercase tracking-wider mb-2 font-bold">
           Source Evidence ({blunder.evidence.length} cited) — Click quote to view in document:
         </div>
         <div
@@ -66,18 +66,18 @@ export function BlunderCard({
               <div
                 key={idx}
                 onClick={() => onSelectEvidence(ev, sourceTitle)}
-                className="group p-3.5 rounded-lg bg-[#111C2E] hover:bg-[#1F304B] border border-[#263449] hover:border-[#14B8A6]/60 cursor-pointer transition-all space-y-2"
+                className="group p-3.5 rounded-lg bg-[#0F1017] hover:bg-[#1C1F2E] border border-[#222533] hover:border-[#CCFF00]/50 cursor-pointer transition-all space-y-2"
                 title="Click to view highlighted quote in original document"
               >
-                <div className="flex items-center justify-between text-xs text-[#94A3B8]">
+                <div className="flex items-center justify-between text-xs text-[#8E95A5]">
                   <span className="font-semibold text-slate-200 truncate max-w-[200px]">
                     {sourceTitle}
                   </span>
                   <span
-                    className={`inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded font-semibold ${
+                    className={`inline-flex items-center gap-1 text-[11px] font-mono px-2 py-0.5 rounded font-semibold ${
                       isVerified
-                        ? "text-[#14B8A6] bg-[#14B8A6]/15 border border-[#14B8A6]/30"
-                        : "text-[#EF4444] bg-[#EF4444]/20 border border-[#EF4444]/40"
+                        ? "text-[#CCFF00] bg-[#CCFF00]/10 border border-[#CCFF00]/30"
+                        : "text-[#EF4444] bg-[#EF4444]/15 border border-[#EF4444]/30"
                     }`}
                   >
                     <span>{isVerified ? "✓" : "✗"}</span>
@@ -85,13 +85,13 @@ export function BlunderCard({
                   </span>
                 </div>
 
-                <blockquote className="font-mono text-xs text-[#5eead4]/95 italic border-l-2 border-[#14B8A6] pl-2.5 line-clamp-3 group-hover:text-white transition-colors">
+                <blockquote className="font-mono text-xs text-[#CCFF00] italic border-l-2 border-[#CCFF00] pl-2.5 line-clamp-3 group-hover:text-white transition-colors">
                   &ldquo;{ev.quote}&rdquo;
                 </blockquote>
 
-                <div className="text-[11px] text-[#94A3B8] flex items-center justify-between pt-1">
+                <div className="text-[11px] text-[#8E95A5] flex items-center justify-between pt-1 font-mono">
                   <span className="truncate max-w-[220px]">Claim: {ev.claim}</span>
-                  <span className="text-[#38BDF8] group-hover:translate-x-0.5 transition-transform text-[10px] font-semibold">
+                  <span className="text-[#3B82F6] group-hover:text-[#CCFF00] group-hover:translate-x-0.5 transition-all text-[10px] font-semibold">
                     Inspect text →
                   </span>
                 </div>
