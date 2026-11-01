@@ -160,13 +160,13 @@ export function ResearchSetup({
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Demo Banner */}
-      <div className="p-4 rounded-xl bg-surface border border-good/40 flex flex-wrap items-center justify-between gap-3 shadow-md">
+      <div className="p-4 rounded-xl bg-[#18263B] border border-[#2563EB]/40 flex flex-wrap items-center justify-between gap-3 shadow-lg">
         <div>
-          <span className="text-xs uppercase font-mono tracking-wider font-bold text-good">
-            Quick 1-Click Demo Showcase
+          <span className="text-xs uppercase font-mono tracking-wider font-bold text-[#38BDF8]">
+            Preloaded Verification Demos
           </span>
-          <p className="text-xs text-muted mt-0.5">
-            Load preloaded hackathon test cases with planted conflicts, outdated cycles, and dark spots.
+          <p className="text-xs text-[#94A3B8] mt-0.5">
+            1-click scenarios with planted contradictions, outdated cycles, and dark spots.
           </p>
         </div>
 
@@ -174,21 +174,21 @@ export function ResearchSetup({
           <button
             type="button"
             onClick={() => onLoadDemo("scholarship", true)}
-            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-good/20 hover:bg-good/30 text-good border border-good/50 transition-colors cursor-pointer"
+            className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#14B8A6]/20 hover:bg-[#14B8A6]/30 text-[#14B8A6] border border-[#14B8A6]/40 transition-colors cursor-pointer"
           >
             🏆 Case 1: Scholarship (Instant)
           </button>
           <button
             type="button"
             onClick={() => onLoadDemo("hostel", true)}
-            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/50 transition-colors cursor-pointer"
+            className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#2563EB]/20 hover:bg-[#2563EB]/30 text-[#38BDF8] border border-[#2563EB]/40 transition-colors cursor-pointer"
           >
-            🏠 Case 2: Hostel Allotment (Instant)
+            🏠 Case 2: Hostel (Instant)
           </button>
           <button
             type="button"
             onClick={() => onLoadDemo("scholarship", false)}
-            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-surface-2 hover:bg-border text-slate-300 border border-border transition-colors cursor-pointer"
+            className="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-[#111C2E] hover:bg-[#1F304B] text-[#94A3B8] hover:text-[#F8FAFC] border border-[#263449] transition-colors cursor-pointer"
           >
             ⚡ Populate Sources (Live Run)
           </button>
@@ -196,9 +196,9 @@ export function ResearchSetup({
       </div>
 
       {/* Card A: Research Goal */}
-      <div className="p-6 rounded-2xl bg-surface border border-border shadow-md space-y-4">
-        <div className="flex items-center gap-2 text-xs uppercase font-mono tracking-wider text-muted font-bold">
-          <span>01.</span>
+      <div className="p-6 rounded-2xl bg-[#18263B] border border-[#263449] shadow-lg space-y-4">
+        <div className="flex items-center gap-2 text-xs uppercase font-mono tracking-wider text-[#94A3B8] font-bold">
+          <span className="text-[#38BDF8]">01.</span>
           <span>Define Your Research Topic &amp; Goal</span>
         </div>
 
@@ -212,7 +212,7 @@ export function ResearchSetup({
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="e.g. What should I verify before applying for the Aurora Merit Scholarship 2026-27?"
               rows={2}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-surface-2 border border-border text-sm text-text placeholder-muted/60 focus:outline-none focus:border-good transition-colors resize-none"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#111C2E] border border-[#263449] text-sm text-[#F8FAFC] placeholder-[#94A3B8]/60 focus:outline-none focus:border-[#2563EB] transition-colors resize-none"
             />
           </div>
 
@@ -225,33 +225,33 @@ export function ResearchSetup({
               value={goal}
               onChange={(e) => setGoal(e.target.value)}
               placeholder="e.g. Apply successfully without missing a deadline or required certificate."
-              className="w-full px-3.5 py-2 rounded-xl bg-surface-2 border border-border text-sm text-text placeholder-muted/60 focus:outline-none focus:border-good transition-colors"
+              className="w-full px-3.5 py-2 rounded-xl bg-[#111C2E] border border-[#263449] text-sm text-[#F8FAFC] placeholder-[#94A3B8]/60 focus:outline-none focus:border-[#2563EB] transition-colors"
             />
           </div>
         </div>
       </div>
 
       {/* Card B: Sources Ingestion */}
-      <div className="p-6 rounded-2xl bg-surface border border-border shadow-md space-y-5">
+      <div className="p-6 rounded-2xl bg-[#18263B] border border-[#263449] shadow-lg space-y-5">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs uppercase font-mono tracking-wider text-muted font-bold">
-            <span>02.</span>
+          <div className="flex items-center gap-2 text-xs uppercase font-mono tracking-wider text-[#94A3B8] font-bold">
+            <span className="text-[#38BDF8]">02.</span>
             <span>Add Sources (2 to 6 required)</span>
           </div>
-          <span className="text-xs font-mono text-muted">
+          <span className="text-xs font-mono text-[#94A3B8]">
             {sources.length}/6 Sources
           </span>
         </div>
 
-        {/* Ingestion Tabs */}
-        <div className="flex border-b border-border text-xs font-medium">
+        {/* Tabs */}
+        <div className="flex border-b border-[#263449] text-xs font-medium">
           <button
             type="button"
             onClick={() => setActiveTab("url")}
             className={`py-2 px-4 border-b-2 transition-colors cursor-pointer ${
               activeTab === "url"
-                ? "border-good text-good font-bold"
-                : "border-transparent text-muted hover:text-text"
+                ? "border-[#38BDF8] text-[#38BDF8] font-bold"
+                : "border-transparent text-[#94A3B8] hover:text-[#F8FAFC]"
             }`}
           >
             🌐 Web URL (via Jina)
@@ -261,8 +261,8 @@ export function ResearchSetup({
             onClick={() => setActiveTab("pdf")}
             className={`py-2 px-4 border-b-2 transition-colors cursor-pointer ${
               activeTab === "pdf"
-                ? "border-good text-good font-bold"
-                : "border-transparent text-muted hover:text-text"
+                ? "border-[#38BDF8] text-[#38BDF8] font-bold"
+                : "border-transparent text-[#94A3B8] hover:text-[#F8FAFC]"
             }`}
           >
             📄 PDF Upload
@@ -272,8 +272,8 @@ export function ResearchSetup({
             onClick={() => setActiveTab("paste")}
             className={`py-2 px-4 border-b-2 transition-colors cursor-pointer ${
               activeTab === "paste"
-                ? "border-good text-good font-bold"
-                : "border-transparent text-muted hover:text-text"
+                ? "border-[#38BDF8] text-[#38BDF8] font-bold"
+                : "border-transparent text-[#94A3B8] hover:text-[#F8FAFC]"
             }`}
           >
             📋 Paste Text
@@ -289,18 +289,18 @@ export function ResearchSetup({
                 value={urlInput}
                 onChange={(e) => setUrlInput(e.target.value)}
                 placeholder="https://example.com/scholarship-guidelines"
-                className="flex-1 px-3.5 py-2 rounded-xl bg-surface-2 border border-border text-sm text-text placeholder-muted/60 focus:outline-none focus:border-good transition-colors"
+                className="flex-1 px-3.5 py-2 rounded-xl bg-[#111C2E] border border-[#263449] text-sm text-[#F8FAFC] placeholder-[#94A3B8]/60 focus:outline-none focus:border-[#2563EB] transition-colors"
               />
               <button
                 type="submit"
                 disabled={isIngesting || !urlInput.trim()}
-                className="px-4 py-2 rounded-xl text-xs font-semibold bg-good hover:bg-emerald-600 disabled:opacity-40 text-black transition-colors cursor-pointer"
+                className="px-4 py-2 rounded-xl text-xs font-bold bg-[#2563EB] hover:bg-blue-600 disabled:opacity-40 text-white transition-colors cursor-pointer"
               >
                 {isIngesting ? "Scraping..." : "+ Add URL"}
               </button>
             </div>
-            <p className="text-[11px] text-muted">
-              Scraped cleanly using Jina Reader. If a login wall or bot protection blocks scraping, paste the text directly.
+            <p className="text-[11px] text-[#94A3B8]">
+              Scraped cleanly using Jina Reader. If protected by login walls or Cloudflare, paste text directly.
             </p>
           </form>
         )}
@@ -308,7 +308,7 @@ export function ResearchSetup({
         {/* Tab 2: PDF */}
         {activeTab === "pdf" && (
           <div className="space-y-3">
-            <div className="border-2 border-dashed border-border hover:border-good/50 rounded-xl p-6 text-center transition-colors">
+            <div className="border-2 border-dashed border-[#263449] hover:border-[#38BDF8]/60 rounded-xl p-6 text-center transition-colors bg-[#111C2E]/60">
               <input
                 type="file"
                 accept="application/pdf"
@@ -322,14 +322,14 @@ export function ResearchSetup({
                 className="cursor-pointer text-xs font-medium text-slate-300 space-y-1 block"
               >
                 <div className="text-2xl mb-1">📂</div>
-                <span className="text-good font-semibold underline">Click to select a PDF</span> (max 5 MB)
-                <p className="text-[11px] text-muted">
-                  Text is extracted server-side with unpdf. Scanned/image-only PDFs require pasting text.
+                <span className="text-[#38BDF8] font-semibold underline">Click to select a PDF</span> (max 5 MB)
+                <p className="text-[11px] text-[#94A3B8]">
+                  Text extracted server-side with unpdf. Scanned image-only PDFs require pasting text.
                 </p>
               </label>
             </div>
             {isIngesting && (
-              <p className="text-xs text-amber-300 font-mono text-center">
+              <p className="text-xs text-[#38BDF8] font-mono text-center">
                 Parsing PDF text...
               </p>
             )}
@@ -344,19 +344,19 @@ export function ResearchSetup({
               value={pasteTitle}
               onChange={(e) => setPasteTitle(e.target.value)}
               placeholder="Source Title (e.g. Official University Portal FAQ)"
-              className="w-full px-3.5 py-2 rounded-xl bg-surface-2 border border-border text-xs text-text placeholder-muted/60 focus:outline-none focus:border-good"
+              className="w-full px-3.5 py-2 rounded-xl bg-[#111C2E] border border-[#263449] text-xs text-[#F8FAFC] placeholder-[#94A3B8]/60 focus:outline-none focus:border-[#2563EB]"
             />
             <textarea
               value={pasteContent}
               onChange={(e) => setPasteContent(e.target.value)}
-              placeholder="Paste raw article, forum discussion, or announcement text here..."
+              placeholder="Paste raw article, circular, or announcement text here..."
               rows={4}
-              className="w-full px-3.5 py-2 rounded-xl bg-surface-2 border border-border text-xs text-text placeholder-muted/60 focus:outline-none focus:border-good resize-none"
+              className="w-full px-3.5 py-2 rounded-xl bg-[#111C2E] border border-[#263449] text-xs text-[#F8FAFC] placeholder-[#94A3B8]/60 focus:outline-none focus:border-[#2563EB] resize-none"
             />
             <button
               type="submit"
               disabled={!pasteContent.trim()}
-              className="px-4 py-2 rounded-xl text-xs font-semibold bg-good hover:bg-emerald-600 disabled:opacity-40 text-black transition-colors cursor-pointer"
+              className="px-4 py-2 rounded-xl text-xs font-bold bg-[#2563EB] hover:bg-blue-600 disabled:opacity-40 text-white transition-colors cursor-pointer"
             >
               + Add Pasted Text
             </button>
@@ -365,50 +365,50 @@ export function ResearchSetup({
 
         {/* Error message */}
         {ingestError && (
-          <div className="p-3 rounded-lg bg-bad/20 border border-bad/40 text-bad text-xs">
+          <div className="p-3 rounded-lg bg-[#EF4444]/20 border border-[#EF4444]/40 text-[#EF4444] text-xs">
             ⚠️ {ingestError}
           </div>
         )}
 
         {/* Source List */}
         <div className="space-y-2 pt-2">
-          <div className="text-[10px] uppercase font-mono tracking-wider text-muted font-bold">
+          <div className="text-[10px] uppercase font-mono tracking-wider text-[#94A3B8] font-bold">
             Configured Sources ({sources.length}):
           </div>
 
           {sources.length === 0 ? (
-            <div className="text-center py-6 text-xs text-muted border border-border/50 rounded-xl bg-surface-2/30">
+            <div className="text-center py-6 text-xs text-[#94A3B8] border border-[#263449] rounded-xl bg-[#111C2E]/40">
               No sources added yet. Enter URLs, upload PDFs, or paste text above.
             </div>
           ) : (
             sources.map((s) => (
               <div
                 key={s.id}
-                className="flex items-center justify-between p-3 rounded-xl bg-surface-2 border border-border text-xs"
+                className="flex items-center justify-between p-3 rounded-xl bg-[#111C2E] border border-[#263449] text-xs"
               >
                 <div className="flex items-center gap-2.5 truncate max-w-md">
-                  <span className="font-mono text-[11px] font-bold text-good px-1.5 py-0.5 rounded bg-good/20">
+                  <span className="font-mono text-[11px] font-bold text-[#14B8A6] px-1.5 py-0.5 rounded bg-[#14B8A6]/15 border border-[#14B8A6]/30">
                     {s.id.toUpperCase()}
                   </span>
-                  <span className="text-[10px] uppercase font-mono text-muted">
+                  <span className="text-[10px] uppercase font-mono text-[#94A3B8]">
                     {s.kind}
                   </span>
                   <span className="font-medium text-slate-200 truncate">
                     {s.title}
                   </span>
-                  <span className="text-[11px] text-muted font-mono">
+                  <span className="text-[11px] text-[#94A3B8] font-mono">
                     ({s.charCount} chars)
                   </span>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <span
-                    className={`text-[10px] px-2 py-0.5 rounded font-medium ${
+                    className={`text-[10px] px-2 py-0.5 rounded font-semibold ${
                       s.status === "ok"
-                        ? "bg-emerald-950/60 text-emerald-300 border border-emerald-800/40"
+                        ? "bg-[#14B8A6]/15 text-[#14B8A6] border border-[#14B8A6]/30"
                         : s.status === "truncated"
-                        ? "bg-amber-950/60 text-amber-300 border border-amber-800/40"
-                        : "bg-bad/20 text-bad"
+                        ? "bg-[#F59E0B]/20 text-[#F59E0B] border border-[#F59E0B]/40"
+                        : "bg-[#EF4444]/20 text-[#EF4444]"
                     }`}
                   >
                     {s.status}
@@ -416,7 +416,7 @@ export function ResearchSetup({
                   <button
                     type="button"
                     onClick={() => handleRemoveSource(s.id)}
-                    className="text-muted hover:text-bad text-sm px-1.5 transition-colors cursor-pointer"
+                    className="text-[#94A3B8] hover:text-[#EF4444] text-sm px-1.5 transition-colors cursor-pointer"
                     title="Remove source"
                   >
                     ✕
@@ -430,7 +430,7 @@ export function ResearchSetup({
 
       {/* Main Action Button */}
       <div className="flex items-center justify-between pt-2">
-        <span className="text-xs text-muted font-mono">
+        <span className="text-xs text-[#94A3B8] font-mono">
           {usableSourcesCount < 2
             ? `⚠️ Add at least ${2 - usableSourcesCount} more source to enable analysis.`
             : "✓ Minimum sources met. Ready to evaluate position."}
@@ -440,7 +440,7 @@ export function ResearchSetup({
           type="button"
           onClick={onStartAnalysis}
           disabled={!canAnalyze}
-          className="px-8 py-3 rounded-xl text-sm font-bold bg-good hover:bg-emerald-600 disabled:opacity-30 disabled:cursor-not-allowed text-black shadow-lg shadow-good/20 transition-all cursor-pointer flex items-center gap-2"
+          className="px-8 py-3.5 rounded-xl text-sm font-bold bg-gradient-to-r from-[#2563EB] to-[#14B8A6] hover:opacity-95 disabled:opacity-30 disabled:cursor-not-allowed text-white shadow-xl shadow-[#2563EB]/25 transition-all cursor-pointer flex items-center gap-2"
         >
           <span>♟️</span>
           <span>Analyze Information Position</span>
@@ -449,4 +449,3 @@ export function ResearchSetup({
     </div>
   );
 }
-

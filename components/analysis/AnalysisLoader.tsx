@@ -29,22 +29,22 @@ export function AnalysisLoader({ currentStage }: AnalysisLoaderProps) {
   };
 
   return (
-    <div className="max-w-xl mx-auto my-12 p-8 rounded-2xl bg-surface border border-border shadow-2xl space-y-6 text-center animate-in fade-in duration-300">
+    <div className="max-w-xl mx-auto my-12 p-8 rounded-2xl bg-[#18263B] border border-[#263449] shadow-2xl space-y-6 text-center animate-in fade-in duration-300">
       <div className="space-y-2">
-        <div className="inline-flex p-3 rounded-xl bg-surface-2 border border-border text-2xl">
+        <div className="inline-flex p-3 rounded-xl bg-[#111C2E] border border-[#263449] text-2xl text-[#14B8A6]">
           ♟️
         </div>
-        <h3 className="text-lg font-bold text-text">
+        <h3 className="text-lg font-bold text-[#F8FAFC]">
           Chess Engine Analyzing Position
         </h3>
-        <p className="text-xs text-muted">
+        <p className="text-xs text-[#94A3B8]">
           Evaluating evidence completeness, cross-checking claims, and calculating Information Position...
         </p>
       </div>
 
       {/* PGN Move List Display */}
-      <div className="bg-surface-2/70 rounded-xl p-5 border border-border font-mono text-xs text-left space-y-3">
-        <div className="text-[10px] uppercase tracking-wider text-muted font-bold border-b border-border/50 pb-2">
+      <div className="bg-[#111C2E] rounded-xl p-5 border border-[#263449] font-mono text-xs text-left space-y-3">
+        <div className="text-[10px] uppercase tracking-wider text-[#94A3B8] font-bold border-b border-[#263449] pb-2">
           PGN Engine Notation / Progress
         </div>
 
@@ -52,34 +52,34 @@ export function AnalysisLoader({ currentStage }: AnalysisLoaderProps) {
           const status = getStageStatus(s.id);
           const isCurrent = currentStage?.id === s.id;
 
-          let icon = <span className="text-muted/40">○</span>;
-          let textColor = "text-muted/60";
+          let icon = <span className="text-[#94A3B8]/40">○</span>;
+          let textColor = "text-[#94A3B8]/60";
 
           if (status === "done") {
-            icon = <span className="text-good font-bold">✓</span>;
-            textColor = "text-slate-200";
+            icon = <span className="text-[#14B8A6] font-bold">✓</span>;
+            textColor = "text-[#F8FAFC]";
           } else if (status === "running") {
-            icon = <span className="text-warn animate-spin inline-block">⏳</span>;
-            textColor = "text-amber-300 font-semibold";
+            icon = <span className="text-[#38BDF8] animate-spin inline-block">⏳</span>;
+            textColor = "text-[#38BDF8] font-semibold";
           } else if (status === "error") {
-            icon = <span className="text-bad font-bold">✗</span>;
-            textColor = "text-bad";
+            icon = <span className="text-[#EF4444] font-bold">✗</span>;
+            textColor = "text-[#EF4444]";
           }
 
           return (
             <div
               key={s.id}
               className={`flex items-center justify-between py-1.5 px-2 rounded transition-colors ${
-                isCurrent ? "bg-surface-2" : ""
+                isCurrent ? "bg-[#1F304B]" : ""
               }`}
             >
               <div className="flex items-center gap-2">
-                <span className="text-muted text-[11px] w-5">{s.num}</span>
+                <span className="text-[#94A3B8] text-[11px] w-5">{s.num}</span>
                 <span className={textColor}>{s.label}</span>
               </div>
               <div className="flex items-center gap-2">
                 {isCurrent && currentStage?.detail && (
-                  <span className="text-[11px] text-muted">{currentStage.detail}</span>
+                  <span className="text-[11px] text-[#94A3B8]">{currentStage.detail}</span>
                 )}
                 {icon}
               </div>
@@ -88,10 +88,9 @@ export function AnalysisLoader({ currentStage }: AnalysisLoaderProps) {
         })}
       </div>
 
-      <div className="text-[11px] text-muted animate-pulse">
+      <div className="text-[11px] text-[#94A3B8] animate-pulse">
         Comparing quotes programmatically against original text...
       </div>
     </div>
   );
 }
-
