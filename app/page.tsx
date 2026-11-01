@@ -40,12 +40,24 @@ export default function Home() {
   ) => {
     setErrorMsg(null);
 
-    if (demoKey === "scholarship" && instantMock) {
-      setAnalysis(mockScholarshipAnalysis as unknown as Analysis);
-      setSources(mockScholarshipAnalysis.sources as unknown as SourceRecord[]);
-      setQuestion(mockScholarshipAnalysis.question);
-      setGoal(mockScholarshipAnalysis.goal);
-      return;
+    if (instantMock) {
+      try {
+        const cachedRes = await fetch(`/demo/${demoKey}/analysis.cached.json`);
+        if (!cachedRes.ok) throw new Error("Could not load cached snapshot");
+        const cachedAnalysis = await cachedRes.json();
+        setAnalysis(cachedAnalysis);
+        setSources(cachedAnalysis.sources);
+        setQuestion(cachedAnalysis.question);
+        setGoal(cachedAnalysis.goal);
+        return;
+      } catch {
+        // Fallback to in-bundle scholarship mock
+        setAnalysis(mockScholarshipAnalysis as unknown as Analysis);
+        setSources(mockScholarshipAnalysis.sources as unknown as SourceRecord[]);
+        setQuestion(mockScholarshipAnalysis.question);
+        setGoal(mockScholarshipAnalysis.goal);
+        return;
+      }
     }
 
     // Populate sources for live run

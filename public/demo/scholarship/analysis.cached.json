@@ -1,0 +1,749 @@
+{
+  "id": "demo-scholarship",
+  "createdAt": "2026-10-31T00:00:00.000Z",
+  "mode": "demo_cached",
+  "question": "What should I verify before applying for the Aurora Merit Scholarship 2026-27?",
+  "goal": "Apply successfully for the scholarship without missing a deadline or a required document.",
+  "checklist": [
+    {
+      "id": "c1",
+      "item": "Eligibility criteria (academic marks, income limit, age)",
+      "importance": "high"
+    },
+    {
+      "id": "c2",
+      "item": "Official list of required documents and accepted income proof",
+      "importance": "high"
+    },
+    {
+      "id": "c3",
+      "item": "Current application deadline",
+      "importance": "high"
+    },
+    {
+      "id": "c4",
+      "item": "How and where to submit the application",
+      "importance": "medium"
+    },
+    {
+      "id": "c5",
+      "item": "Award amount and payment method",
+      "importance": "medium"
+    },
+    {
+      "id": "c6",
+      "item": "Renewal conditions for later years",
+      "importance": "high"
+    },
+    {
+      "id": "c7",
+      "item": "Selection process, criteria and notification timeline",
+      "importance": "medium"
+    },
+    {
+      "id": "c8",
+      "item": "Appeal or grievance process after a decision",
+      "importance": "low"
+    },
+    {
+      "id": "c9",
+      "item": "Official contact for queries",
+      "importance": "low"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "paste",
+      "title": "Aurora Foundation: official scholarship page",
+      "charCount": 1149,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "updated",
+          "value": "12 August 2026",
+          "quote": "Last updated: 12 August 2026",
+          "verification": {
+            "status": "exact",
+            "start": 172,
+            "end": 200
+          }
+        },
+        {
+          "kind": "cycle",
+          "value": "2026-27",
+          "quote": "Aurora Merit Scholarship 2026-27",
+          "verification": {
+            "status": "exact",
+            "start": 139,
+            "end": 171
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo. The Aurora Foundation and this scholarship are fictional.\n\nAurora Foundation: Aurora Merit Scholarship 2026-27\nLast updated: 12 August 2026\n\nAbout the scholarship\nThe Aurora Merit Scholarship supports undergraduate students from low-income families who have performed well in school. The award is Rs. 50,000 per academic year, paid directly to the student's bank account.\n\nEligibility\nApplicants must have scored at least 85% in Class XII. The annual family income must be below Rs. 6,00,000. Applicants must be 22 years of age or younger on 1 September 2026.\n\nDocuments required\nApplicants must upload the following documents: income certificate issued by the Tehsildar, Class XII marksheet, a copy of the bank passbook, and one passport-size photograph.\n\nImportant dates\nThe last date to submit applications is 15 November 2026. Shortlisted candidates will be notified by email.\n\nHow to apply\nApplications are accepted only through the online portal linked on this page. Offline applications will not be considered.\n\nContact\nFor queries, write to scholarships@aurorafoundation.example.\n"
+    },
+    {
+      "id": "s2",
+      "kind": "paste",
+      "title": "Riverbend University: Student Affairs blog",
+      "charCount": 863,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "published",
+          "value": "3 September 2026",
+          "quote": "Posted: 3 September 2026",
+          "verification": {
+            "status": "exact",
+            "start": 167,
+            "end": 191
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo. Riverbend University and the Aurora Foundation are fictional.\n\nRiverbend University: Student Affairs Blog\nPosted: 3 September 2026\n\nScholarships to watch this season: Aurora Merit Scholarship\n\nHere is what you need to know if you plan to apply for the Aurora Merit Scholarship this year.\n\nDocuments to keep ready: income certificate or ITR acknowledgement, Class XII marksheet, bank passbook, and a caste certificate if applicable.\n\nDeadline: Our office has noted that applications close on 30 November 2026, so there is still plenty of time.\n\nThe award is Rs. 50,000 per year. The scholarship may be renewed in later years, but students should check with the foundation for the renewal conditions.\n\nStudents who need help with the application can visit the Student Affairs office on the second floor.\n"
+    },
+    {
+      "id": "s3",
+      "kind": "paste",
+      "title": "ScholarHub: scholarship listing",
+      "charCount": 512,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "updated",
+          "value": "4 January 2026",
+          "quote": "Updated: 4 January 2026",
+          "verification": {
+            "status": "exact",
+            "start": 147,
+            "end": 170
+          }
+        },
+        {
+          "kind": "cycle",
+          "value": "2025-26",
+          "quote": "Aurora Merit Scholarship 2025-26",
+          "verification": {
+            "status": "exact",
+            "start": 172,
+            "end": 204
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo. ScholarHub and the Aurora Foundation are fictional.\n\nScholarHub: Scholarship Listings\nUpdated: 4 January 2026\n\nAurora Merit Scholarship 2025-26\nIncome limit: family income below Rs. 5,00,000 per year.\nMinimum marks: 80% in Class XII.\nLast date: 20 December 2025.\nAward: Rs. 40,000 per year.\nApply now through the official Aurora Foundation portal.\n\nRelated scholarships: Meridian Merit Award, Lakeside Girls Education Grant, Northern Star Fellowship.\n"
+    },
+    {
+      "id": "s4",
+      "kind": "pdf",
+      "title": "Aurora Foundation: Notice AMS/2026/07 (PDF)",
+      "charCount": 644,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "published",
+          "value": "10 October 2026",
+          "quote": "Date: 10 October 2026",
+          "verification": {
+            "status": "exact",
+            "start": 162,
+            "end": 183
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo (text of a PDF notice). The Aurora Foundation is fictional.\n\nAurora Foundation\nNotice No. AMS/2026/07\nDate: 10 October 2026\n\nSubject: Aurora Merit Scholarship 2026-27: Clarifications and extension of last date\n\n1. The income certificate must have been issued within the last six months before the date of application. ITR acknowledgements are not accepted as proof of income.\n\n2. The last date to submit applications has been extended to 22 November 2026.\n\n3. Applicants who have already submitted an application need not re-apply.\n\nIssued by the Scholarship Cell, Aurora Foundation.\n"
+    }
+  ],
+  "claims": [
+    {
+      "checklistId": "c1",
+      "claim": "Minimum 85% in Class XII.",
+      "quote": "Applicants must have scored at least 85% in Class XII.",
+      "visibleDate": null,
+      "id": "s1-k1",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 446,
+        "end": 500
+      }
+    },
+    {
+      "checklistId": "c1",
+      "claim": "Family income must be below Rs. 6,00,000 per year.",
+      "quote": "The annual family income must be below Rs. 6,00,000.",
+      "visibleDate": null,
+      "id": "s1-k2",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 501,
+        "end": 553
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "Income certificate from the Tehsildar, marksheet, passbook and photo are required.",
+      "quote": "income certificate issued by the Tehsildar, Class XII marksheet, a copy of the bank passbook, and one passport-size photograph",
+      "visibleDate": null,
+      "id": "s1-k3",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 689,
+        "end": 815
+      }
+    },
+    {
+      "checklistId": "c3",
+      "claim": "Last date is 15 November 2026.",
+      "quote": "The last date to submit applications is 15 November 2026.",
+      "visibleDate": null,
+      "id": "s1-k4",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 834,
+        "end": 891
+      }
+    },
+    {
+      "checklistId": "c4",
+      "claim": "Applications only through the online portal.",
+      "quote": "Applications are accepted only through the online portal linked on this page.",
+      "visibleDate": null,
+      "id": "s1-k5",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 956,
+        "end": 1033
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "Award is Rs. 50,000 per academic year, paid to the bank account.",
+      "quote": "The award is Rs. 50,000 per academic year, paid directly to the student's bank account.",
+      "visibleDate": null,
+      "id": "s1-k6",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 345,
+        "end": 432
+      }
+    },
+    {
+      "checklistId": "c7",
+      "claim": "Shortlisted candidates are notified by email.",
+      "quote": "Shortlisted candidates will be notified by email.",
+      "visibleDate": null,
+      "id": "s1-k7",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 892,
+        "end": 941
+      }
+    },
+    {
+      "checklistId": "c9",
+      "claim": "Queries go to a scholarships email address.",
+      "quote": "For queries, write to scholarships@aurorafoundation.example.",
+      "visibleDate": null,
+      "id": "s1-k8",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 1088,
+        "end": 1148
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "Blog lists an income certificate OR an ITR acknowledgement as income proof.",
+      "quote": "income certificate or ITR acknowledgement",
+      "visibleDate": null,
+      "id": "s2-k1",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 375,
+        "end": 416
+      }
+    },
+    {
+      "checklistId": "c3",
+      "claim": "Blog says applications close on 30 November 2026.",
+      "quote": "applications close on 30 November 2026",
+      "visibleDate": null,
+      "id": "s2-k2",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 530,
+        "end": 568
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "Blog says the award is Rs. 50,000 per year.",
+      "quote": "The award is Rs. 50,000 per year.",
+      "visibleDate": null,
+      "id": "s2-k3",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 605,
+        "end": 638
+      }
+    },
+    {
+      "checklistId": "c6",
+      "claim": "Renewal is possible but the conditions are not given.",
+      "quote": "The scholarship may be renewed in later years, but students should check with the foundation for the renewal conditions.",
+      "visibleDate": null,
+      "id": "s2-k4",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 639,
+        "end": 759
+      }
+    },
+    {
+      "checklistId": "c1",
+      "claim": "Listing gives an income limit of Rs. 5,00,000 (2025-26 cycle).",
+      "quote": "Income limit: family income below Rs. 5,00,000 per year.",
+      "visibleDate": null,
+      "id": "s3-k1",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 205,
+        "end": 261
+      }
+    },
+    {
+      "checklistId": "c1",
+      "claim": "Listing gives 80% minimum marks (2025-26 cycle).",
+      "quote": "Minimum marks: 80% in Class XII.",
+      "visibleDate": null,
+      "id": "s3-k2",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 262,
+        "end": 294
+      }
+    },
+    {
+      "checklistId": "c3",
+      "claim": "Listing gives 20 December 2025 as the last date.",
+      "quote": "Last date: 20 December 2025.",
+      "visibleDate": null,
+      "id": "s3-k3",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 295,
+        "end": 323
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "Listing gives an award of Rs. 40,000 per year (2025-26 cycle).",
+      "quote": "Award: Rs. 40,000 per year.",
+      "visibleDate": null,
+      "id": "s3-k4",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 324,
+        "end": 351
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "Notice says ITR acknowledgements are not accepted as income proof.",
+      "quote": "ITR acknowledgements are not accepted as proof of income.",
+      "visibleDate": null,
+      "id": "s4-k1",
+      "sourceId": "s4",
+      "verification": {
+        "status": "exact",
+        "start": 378,
+        "end": 435
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "Income certificate must be issued within the last six months.",
+      "quote": "The income certificate must have been issued within the last six months before the date of application.",
+      "visibleDate": null,
+      "id": "s4-k2",
+      "sourceId": "s4",
+      "verification": {
+        "status": "exact",
+        "start": 274,
+        "end": 377
+      }
+    },
+    {
+      "checklistId": "c3",
+      "claim": "Notice extends the last date to 22 November 2026.",
+      "quote": "The last date to submit applications has been extended to 22 November 2026.",
+      "visibleDate": null,
+      "id": "s4-k3",
+      "sourceId": "s4",
+      "verification": {
+        "status": "exact",
+        "start": 440,
+        "end": 515
+      }
+    }
+  ],
+  "result": {
+    "evalReasoning": "The reviewed sources agree on eligibility, the award amount and the application route, but they disagree on the deadline and on which income proof is accepted, and none establishes the renewal conditions or an appeal process. These are potential gaps based only on the four sources reviewed.",
+    "coverage": [
+      {
+        "id": "c1",
+        "item": "Eligibility criteria (academic marks, income limit, age)",
+        "importance": "high",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k1",
+          "s1-k2",
+          "s3-k1",
+          "s3-k2"
+        ]
+      },
+      {
+        "id": "c2",
+        "item": "Official list of required documents and accepted income proof",
+        "importance": "high",
+        "status": "conflicted",
+        "supportingClaimIds": [
+          "s1-k3",
+          "s2-k1",
+          "s4-k1",
+          "s4-k2"
+        ]
+      },
+      {
+        "id": "c3",
+        "item": "Current application deadline",
+        "importance": "high",
+        "status": "conflicted",
+        "supportingClaimIds": [
+          "s1-k4",
+          "s2-k2",
+          "s3-k3",
+          "s4-k3"
+        ]
+      },
+      {
+        "id": "c4",
+        "item": "How and where to submit the application",
+        "importance": "medium",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k5"
+        ]
+      },
+      {
+        "id": "c5",
+        "item": "Award amount and payment method",
+        "importance": "medium",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k6",
+          "s2-k3",
+          "s3-k4"
+        ]
+      },
+      {
+        "id": "c6",
+        "item": "Renewal conditions for later years",
+        "importance": "high",
+        "status": "unanswered",
+        "supportingClaimIds": [
+          "s2-k4"
+        ]
+      },
+      {
+        "id": "c7",
+        "item": "Selection process, criteria and notification timeline",
+        "importance": "medium",
+        "status": "unanswered",
+        "supportingClaimIds": [
+          "s1-k7"
+        ]
+      },
+      {
+        "id": "c8",
+        "item": "Appeal or grievance process after a decision",
+        "importance": "low",
+        "status": "missing",
+        "supportingClaimIds": []
+      },
+      {
+        "id": "c9",
+        "item": "Official contact for queries",
+        "importance": "low",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k8"
+        ]
+      }
+    ],
+    "blunders": [
+      {
+        "id": "b1",
+        "type": "conflict",
+        "checklistId": "c3",
+        "severity": "high",
+        "description": "Three reviewed sources give three different application deadlines: 15, 22 and 30 November 2026.",
+        "evidence": [
+          {
+            "claimId": "s1-k4",
+            "sourceId": "s1",
+            "claim": "Last date is 15 November 2026.",
+            "quote": "The last date to submit applications is 15 November 2026.",
+            "verification": {
+              "status": "exact",
+              "start": 834,
+              "end": 891
+            }
+          },
+          {
+            "claimId": "s4-k3",
+            "sourceId": "s4",
+            "claim": "Notice extends the last date to 22 November 2026.",
+            "quote": "The last date to submit applications has been extended to 22 November 2026.",
+            "verification": {
+              "status": "exact",
+              "start": 440,
+              "end": 515
+            }
+          },
+          {
+            "claimId": "s2-k2",
+            "sourceId": "s2",
+            "claim": "Blog says applications close on 30 November 2026.",
+            "quote": "applications close on 30 November 2026",
+            "verification": {
+              "status": "exact",
+              "start": 530,
+              "end": 568
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "b2",
+        "type": "conflict",
+        "checklistId": "c2",
+        "severity": "high",
+        "description": "The university blog accepts an ITR acknowledgement as income proof, but the foundation's notice says ITR acknowledgements are not accepted.",
+        "evidence": [
+          {
+            "claimId": "s2-k1",
+            "sourceId": "s2",
+            "claim": "Blog lists an income certificate OR an ITR acknowledgement as income proof.",
+            "quote": "income certificate or ITR acknowledgement",
+            "verification": {
+              "status": "exact",
+              "start": 375,
+              "end": 416
+            }
+          },
+          {
+            "claimId": "s4-k1",
+            "sourceId": "s4",
+            "claim": "Notice says ITR acknowledgements are not accepted as income proof.",
+            "quote": "ITR acknowledgements are not accepted as proof of income.",
+            "verification": {
+              "status": "exact",
+              "start": 378,
+              "end": 435
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "b3",
+        "type": "outdated",
+        "checklistId": "c1",
+        "severity": "medium",
+        "description": "The ScholarHub listing refers to the 2025-26 cycle (lower income limit, earlier deadline) and may not apply to 2026-27.",
+        "evidence": [
+          {
+            "claimId": "s3-k1",
+            "sourceId": "s3",
+            "claim": "Listing gives an income limit of Rs. 5,00,000 (2025-26 cycle).",
+            "quote": "Income limit: family income below Rs. 5,00,000 per year.",
+            "verification": {
+              "status": "exact",
+              "start": 205,
+              "end": 261
+            }
+          },
+          {
+            "claimId": "s3-k3",
+            "sourceId": "s3",
+            "claim": "Listing gives 20 December 2025 as the last date.",
+            "quote": "Last date: 20 December 2025.",
+            "verification": {
+              "status": "exact",
+              "start": 295,
+              "end": 323
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      }
+    ],
+    "missedMoves": [
+      {
+        "id": "m1",
+        "checklistId": "c6",
+        "kind": "unanswered",
+        "importance": "high",
+        "description": "Renewal is mentioned, but no reviewed source states the renewal conditions.",
+        "whyItMatters": "Funding in later years may depend on conditions the applicant does not know yet.",
+        "scope": "Mentioned, but not fully established in the 4 reviewed sources.",
+        "label": "unknown"
+      },
+      {
+        "id": "m2",
+        "checklistId": "c7",
+        "kind": "unanswered",
+        "importance": "medium",
+        "description": "Sources say shortlisted candidates are notified but give no selection criteria or timeline.",
+        "whyItMatters": "The applicant cannot judge their chances or plan around the results date.",
+        "scope": "Mentioned, but not fully established in the 4 reviewed sources.",
+        "label": "unknown"
+      },
+      {
+        "id": "m3",
+        "checklistId": "c8",
+        "kind": "missing",
+        "importance": "low",
+        "description": "No reviewed source describes an appeal or grievance process.",
+        "whyItMatters": "If an application is rejected in error, the applicant would not know how to challenge it.",
+        "scope": "Not found in the 4 reviewed sources.",
+        "label": "unknown"
+      }
+    ],
+    "hangingPieces": [
+      {
+        "id": "h1",
+        "checklistId": "c3",
+        "impact": "high",
+        "description": "The deadline is disputed across three sources; acting on the wrong date could mean missing the window.",
+        "label": "ai_inferred"
+      },
+      {
+        "id": "h2",
+        "checklistId": "c6",
+        "impact": "high",
+        "description": "Renewal conditions are unknown, which affects the multi-year value of the award.",
+        "label": "ai_inferred"
+      }
+    ],
+    "verifyNext": [
+      {
+        "id": "v1",
+        "rank": 1,
+        "priority": "high",
+        "action": "Confirm the current last date on the Aurora Foundation's latest official notice.",
+        "reason": "Three reviewed sources give three different dates.",
+        "whereToVerify": "The foundation's official notice board or application portal",
+        "relatedChecklistId": "c3",
+        "triggers": [
+          "b1",
+          "h1"
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "v2",
+        "rank": 2,
+        "priority": "high",
+        "action": "Confirm which income proof is accepted and how recent it must be.",
+        "reason": "The blog and the foundation notice contradict each other on ITR acknowledgements.",
+        "whereToVerify": "The foundation's latest notice or the portal's document checklist",
+        "relatedChecklistId": "c2",
+        "triggers": [
+          "b2"
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "v3",
+        "rank": 3,
+        "priority": "high",
+        "action": "Find the official renewal conditions (marks threshold, documents, duration).",
+        "reason": "No reviewed source states them.",
+        "whereToVerify": "The foundation's scholarship guidelines or the scholarship cell",
+        "relatedChecklistId": "c6",
+        "triggers": [
+          "m1",
+          "h2"
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "v4",
+        "rank": 4,
+        "priority": "medium",
+        "action": "Disregard the 2025-26 ScholarHub listing and use the 2026-27 official page and notice instead.",
+        "reason": "The listing is for an earlier cycle with different figures.",
+        "whereToVerify": "The foundation's official 2026-27 page",
+        "relatedChecklistId": "c1",
+        "triggers": [
+          "b3"
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "v5",
+        "rank": 5,
+        "priority": "low",
+        "action": "Ask the scholarship cell how to raise a grievance or appeal a decision.",
+        "reason": "No appeal process was found in the reviewed sources.",
+        "whereToVerify": "The scholarship cell's contact email",
+        "relatedChecklistId": "c8",
+        "triggers": [
+          "m3"
+        ],
+        "label": "ai_inferred"
+      }
+    ],
+    "score": {
+      "value": 1,
+      "coverage": 0.65,
+      "version": "v1",
+      "factors": [
+        {
+          "key": "coverage",
+          "label": "Importance-weighted coverage",
+          "delta": 1.5,
+          "detail": "65% of weighted checklist items are established by verified quotations (conflicted items count half, unanswered items 40%)."
+        },
+        {
+          "key": "staleness",
+          "label": "Possibly outdated information",
+          "delta": -0.5,
+          "detail": "1 outdated-information warning(s), each backed by a visible date or cycle."
+        }
+      ],
+      "capApplied": null
+    },
+    "warnings": [],
+    "scopeNote": "Reviewed 4 sources: Aurora Foundation: official scholarship page; Riverbend University: Student Affairs blog; ScholarHub: scholarship listing; Aurora Foundation: Notice AMS/2026/07 (PDF).",
+    "disclaimer": "Based on reviewed sources only. Absence in these sources does not mean absence in reality."
+  }
+}

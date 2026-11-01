@@ -176,12 +176,19 @@ export function ResearchSetup({
             onClick={() => onLoadDemo("scholarship", true)}
             className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-good/20 hover:bg-good/30 text-good border border-good/50 transition-colors cursor-pointer"
           >
-            🏆 Load Scholarship Case (Instant)
+            🏆 Case 1: Scholarship (Instant)
+          </button>
+          <button
+            type="button"
+            onClick={() => onLoadDemo("hostel", true)}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/50 transition-colors cursor-pointer"
+          >
+            🏠 Case 2: Hostel Allotment (Instant)
           </button>
           <button
             type="button"
             onClick={() => onLoadDemo("scholarship", false)}
-            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-surface-2 hover:bg-border text-slate-200 border border-border transition-colors cursor-pointer"
+            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-surface-2 hover:bg-border text-slate-300 border border-border transition-colors cursor-pointer"
           >
             ⚡ Populate Sources (Live Run)
           </button>

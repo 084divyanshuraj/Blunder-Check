@@ -1,0 +1,669 @@
+{
+  "id": "an-mvxdg64b-pelc",
+  "createdAt": "2026-11-01T05:10:35.771Z",
+  "mode": "demo_cached",
+  "question": "What should I verify before paying for a hostel room at Northfield Institute for 2026-27?",
+  "goal": "Secure a hostel room and avoid paying the wrong amount or submitting the wrong documents.",
+  "checklist": [
+    {
+      "id": "c1",
+      "item": "Eligibility criteria and student status requirements for booking a hostel room for the 2026-27 academic year.",
+      "importance": "high"
+    },
+    {
+      "id": "c2",
+      "item": "Exact hostel fee breakdown, including deposit, rent, utility charges, and payment schedules for 2026-27.",
+      "importance": "high"
+    },
+    {
+      "id": "c3",
+      "item": "Official payment methods, authorized bank account details, or payment portal links.",
+      "importance": "high"
+    },
+    {
+      "id": "c4",
+      "item": "Required identity, admission, or medical documents needed to finalize the hostel booking.",
+      "importance": "high"
+    },
+    {
+      "id": "c5",
+      "item": "Deadlines for hostel fee payment and refund or cancellation policy details.",
+      "importance": "high"
+    },
+    {
+      "id": "c6",
+      "item": "Room allocation process, room types available, and occupancy conditions.",
+      "importance": "medium"
+    },
+    {
+      "id": "c7",
+      "item": "Rules, terms of stay, duration of agreement, and renewal policies for the 2026-27 period.",
+      "importance": "medium"
+    },
+    {
+      "id": "c8",
+      "item": "Official contact channels, hostel administration details, or grievance redressal routes for payment disputes.",
+      "importance": "medium"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "paste",
+      "title": "Northfield Institute: hostel allotment page",
+      "charCount": 729,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "updated",
+          "value": "20 July 2026",
+          "quote": "Last updated: 20 July 2026",
+          "verification": {
+            "status": "exact",
+            "start": 144,
+            "end": 170
+          }
+        },
+        {
+          "kind": "cycle",
+          "value": "2026-27",
+          "quote": "Hostel Allotment 2026-27",
+          "verification": {
+            "status": "exact",
+            "start": 119,
+            "end": 143
+          }
+        },
+        {
+          "kind": "deadline",
+          "value": "15 January 2027",
+          "quote": "second is due by 15 January 2027",
+          "verification": {
+            "status": "exact",
+            "start": 317,
+            "end": 349
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo. Northfield Institute is fictional.\n\nNorthfield Institute: Hostel Allotment 2026-27\nLast updated: 20 July 2026\n\nHostel fee for the academic year 2026-27 is Rs. 68,000, payable in two instalments. The first instalment is due at the time of allotment and the second is due by 15 January 2027.\n\nEligibility: First-year students admitted through the main counselling round are eligible. Allotment is made on a first-come, first-served basis after fee payment.\n\nRequired documents: admission letter, two passport-size photographs, and a parent or guardian declaration form.\n\nHostel gates close at 9:30 PM on weekdays.\n\nFor hostel queries, contact the Chief Warden's office.\n"
+    },
+    {
+      "id": "s2",
+      "kind": "paste",
+      "title": "Northfield Students Forum: hostel FAQ",
+      "charCount": 533,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "published",
+          "value": "2 August 2026",
+          "quote": "Posted: 2 August 2026",
+          "verification": {
+            "status": "exact",
+            "start": 150,
+            "end": 171
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo. Northfield Institute is fictional.\n\nNorthfield Students Forum: \"Hostel FAQ for freshers\"\nPosted: 2 August 2026\n\nHey everyone! Quick summary of what seniors told me. The hostel fee is Rs. 72,000 for the year including mess charges. Rooms are shared by three students. You need your admission letter and a medical fitness certificate on the day of allotment. Gates close around 10 PM, but nobody really checks.\n\nPro tip: Pay the fee early, otherwise you may lose your room.\n"
+    },
+    {
+      "id": "s3",
+      "kind": "pdf",
+      "title": "Northfield Institute: Student Handbook 2025-26 (PDF)",
+      "charCount": 502,
+      "status": "ok",
+      "dateSignals": [
+        {
+          "kind": "published",
+          "value": "June 2025",
+          "quote": "Published: June 2025",
+          "verification": {
+            "status": "exact",
+            "start": 155,
+            "end": 175
+          }
+        },
+        {
+          "kind": "cycle",
+          "value": "2025-26",
+          "quote": "Student Handbook 2025-26",
+          "verification": {
+            "status": "exact",
+            "start": 119,
+            "end": 143
+          }
+        },
+        {
+          "kind": "deadline",
+          "value": "10 August 2025",
+          "quote": "before 10 August 2025",
+          "verification": {
+            "status": "exact",
+            "start": 287,
+            "end": 308
+          }
+        }
+      ],
+      "text": "SYNTHETIC SAMPLE SOURCE: written for the Blunder Check demo. Northfield Institute is fictional.\n\nNorthfield Institute: Student Handbook 2025-26 (PDF text)\nPublished: June 2025\n\nHostel fee for the academic year 2025-26 is Rs. 61,000 including mess charges, payable in a single instalment before 10 August 2025.\n\nHostel rooms are allotted to first-year and second-year students. Hostel gates close at 9:00 PM.\n\nStudents who leave the hostel permanently during the year must inform the warden in writing.\n"
+    }
+  ],
+  "claims": [
+    {
+      "checklistId": "c2",
+      "claim": "Hostel fee for the 2026-27 academic year is Rs. 68,000, payable in two instalments.",
+      "quote": "Hostel fee for the academic year 2026-27 is Rs. 68,000, payable in two instalments.",
+      "visibleDate": "2026-27",
+      "id": "s1-k1",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 172,
+        "end": 255
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "The first hostel fee instalment is due at the time of allotment and the second instalment is due by 15 January 2027.",
+      "quote": "The first instalment is due at the time of allotment and the second is due by 15 January 2027.",
+      "visibleDate": "15 January 2027",
+      "id": "s1-k2",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 256,
+        "end": 350
+      }
+    },
+    {
+      "checklistId": "c1",
+      "claim": "First-year students admitted through the main counselling round are eligible for hostel allotment.",
+      "quote": "Eligibility: First-year students admitted through the main counselling round are eligible.",
+      "visibleDate": null,
+      "id": "s1-k3",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 352,
+        "end": 442
+      }
+    },
+    {
+      "checklistId": "c6",
+      "claim": "Hostel allotment is made on a first-come, first-served basis after fee payment.",
+      "quote": "Allotment is made on a first-come, first-served basis after fee payment.",
+      "visibleDate": null,
+      "id": "s1-k4",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 443,
+        "end": 515
+      }
+    },
+    {
+      "checklistId": "c4",
+      "claim": "Required documents for hostel booking are admission letter, two passport-size photographs, and a parent or guardian declaration form.",
+      "quote": "Required documents: admission letter, two passport-size photographs, and a parent or guardian declaration form.",
+      "visibleDate": null,
+      "id": "s1-k5",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 517,
+        "end": 628
+      }
+    },
+    {
+      "checklistId": "c7",
+      "claim": "Hostel gates close at 9:30 PM on weekdays.",
+      "quote": "Hostel gates close at 9:30 PM on weekdays.",
+      "visibleDate": null,
+      "id": "s1-k6",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 630,
+        "end": 672
+      }
+    },
+    {
+      "checklistId": "c8",
+      "claim": "For hostel queries, students should contact the Chief Warden's office.",
+      "quote": "For hostel queries, contact the Chief Warden's office.",
+      "visibleDate": null,
+      "id": "s1-k7",
+      "sourceId": "s1",
+      "verification": {
+        "status": "exact",
+        "start": 674,
+        "end": 728
+      }
+    },
+    {
+      "checklistId": "c2",
+      "claim": "The hostel fee is Rs. 72,000 for the year, including mess charges.",
+      "quote": "The hostel fee is Rs. 72,000 for the year including mess charges.",
+      "visibleDate": null,
+      "id": "s2-k1",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 226,
+        "end": 291
+      }
+    },
+    {
+      "checklistId": "c6",
+      "claim": "Hostel rooms are shared by three students.",
+      "quote": "Rooms are shared by three students.",
+      "visibleDate": null,
+      "id": "s2-k2",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 292,
+        "end": 327
+      }
+    },
+    {
+      "checklistId": "c4",
+      "claim": "An admission letter and a medical fitness certificate are required on the day of allotment.",
+      "quote": "You need your admission letter and a medical fitness certificate on the day of allotment.",
+      "visibleDate": null,
+      "id": "s2-k3",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 328,
+        "end": 417
+      }
+    },
+    {
+      "checklistId": "c7",
+      "claim": "Hostel gates close around 10 PM, though it is reported that nobody really checks.",
+      "quote": "Gates close around 10 PM, but nobody really checks.",
+      "visibleDate": null,
+      "id": "s2-k4",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 418,
+        "end": 469
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "Failing to pay the hostel fee early may result in losing the room.",
+      "quote": "Pay the fee early, otherwise you may lose your room.",
+      "visibleDate": null,
+      "id": "s2-k5",
+      "sourceId": "s2",
+      "verification": {
+        "status": "exact",
+        "start": 480,
+        "end": 532
+      }
+    },
+    {
+      "checklistId": "c5",
+      "claim": "Hostel fee for the academic year 2025-26 is Rs. 61,000 including mess charges, payable in a single instalment before 10 August 2025.",
+      "quote": "Hostel fee for the academic year 2025-26 is Rs. 61,000 including mess charges, payable in a single instalment before 10 August 2025.",
+      "visibleDate": "2025-26",
+      "id": "s3-k1",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 177,
+        "end": 309
+      }
+    },
+    {
+      "checklistId": "c6",
+      "claim": "Hostel rooms are allotted to first-year and second-year students.",
+      "quote": "Hostel rooms are allotted to first-year and second-year students.",
+      "visibleDate": null,
+      "id": "s3-k2",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 311,
+        "end": 376
+      }
+    },
+    {
+      "checklistId": "c7",
+      "claim": "Hostel gates close at 9:00 PM.",
+      "quote": "Hostel gates close at 9:00 PM.",
+      "visibleDate": null,
+      "id": "s3-k3",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 377,
+        "end": 407
+      }
+    },
+    {
+      "checklistId": "c7",
+      "claim": "Students who leave the hostel permanently during the year must inform the warden in writing.",
+      "quote": "Students who leave the hostel permanently during the year must inform the warden in writing.",
+      "visibleDate": null,
+      "id": "s3-k4",
+      "sourceId": "s3",
+      "verification": {
+        "status": "exact",
+        "start": 409,
+        "end": 501
+      }
+    }
+  ],
+  "result": {
+    "evalReasoning": "The reviewed sources provide basic fee schedules and eligibility criteria for Northfield Institute's 2026-27 hostel allotment, but leave critical financial details unconfirmed. Discrepancies exist between official notices and student forum reports regarding total fee amounts and document requirements, while official payment channels and refund terms are completely unaddressed.",
+    "coverage": [
+      {
+        "id": "c1",
+        "item": "Eligibility criteria and student status requirements for booking a hostel room for the 2026-27 academic year.",
+        "importance": "high",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k3"
+        ]
+      },
+      {
+        "id": "c2",
+        "item": "Exact hostel fee breakdown, including deposit, rent, utility charges, and payment schedules for 2026-27.",
+        "importance": "high",
+        "status": "unanswered",
+        "supportingClaimIds": [
+          "s1-k1",
+          "s2-k1"
+        ]
+      },
+      {
+        "id": "c3",
+        "item": "Official payment methods, authorized bank account details, or payment portal links.",
+        "importance": "high",
+        "status": "missing",
+        "supportingClaimIds": []
+      },
+      {
+        "id": "c4",
+        "item": "Required identity, admission, or medical documents needed to finalize the hostel booking.",
+        "importance": "high",
+        "status": "conflicted",
+        "supportingClaimIds": [
+          "s1-k5",
+          "s2-k3"
+        ]
+      },
+      {
+        "id": "c5",
+        "item": "Deadlines for hostel fee payment and refund or cancellation policy details.",
+        "importance": "high",
+        "status": "unanswered",
+        "supportingClaimIds": [
+          "s1-k2",
+          "s2-k5",
+          "s3-k1"
+        ]
+      },
+      {
+        "id": "c6",
+        "item": "Room allocation process, room types available, and occupancy conditions.",
+        "importance": "medium",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k4",
+          "s2-k2",
+          "s3-k2"
+        ]
+      },
+      {
+        "id": "c7",
+        "item": "Rules, terms of stay, duration of agreement, and renewal policies for the 2026-27 period.",
+        "importance": "medium",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k6",
+          "s2-k4",
+          "s3-k3",
+          "s3-k4"
+        ]
+      },
+      {
+        "id": "c8",
+        "item": "Official contact channels, hostel administration details, or grievance redressal routes for payment disputes.",
+        "importance": "medium",
+        "status": "covered",
+        "supportingClaimIds": [
+          "s1-k7"
+        ]
+      }
+    ],
+    "blunders": [
+      {
+        "id": "b1",
+        "type": "conflict",
+        "checklistId": "c2",
+        "severity": "high",
+        "description": "Official notice claim s1-k1 states the 2026-27 fee is Rs. 68,000 in two instalments, whereas student forum claim s2-k1 reports it as Rs. 72,000 including mess charges.",
+        "evidence": [
+          {
+            "claimId": "s1-k1",
+            "sourceId": "s1",
+            "claim": "Hostel fee for the 2026-27 academic year is Rs. 68,000, payable in two instalments.",
+            "quote": "Hostel fee for the academic year 2026-27 is Rs. 68,000, payable in two instalments.",
+            "verification": {
+              "status": "exact",
+              "start": 172,
+              "end": 255
+            }
+          },
+          {
+            "claimId": "s2-k1",
+            "sourceId": "s2",
+            "claim": "The hostel fee is Rs. 72,000 for the year, including mess charges.",
+            "quote": "The hostel fee is Rs. 72,000 for the year including mess charges.",
+            "verification": {
+              "status": "exact",
+              "start": 226,
+              "end": 291
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "b2",
+        "type": "conflict",
+        "checklistId": "c4",
+        "severity": "medium",
+        "description": "Official notice claim s1-k5 specifies required documents as admission letter, photo, and parent declaration, while forum claim s2-k3 adds a medical fitness certificate.",
+        "evidence": [
+          {
+            "claimId": "s1-k5",
+            "sourceId": "s1",
+            "claim": "Required documents for hostel booking are admission letter, two passport-size photographs, and a parent or guardian declaration form.",
+            "quote": "Required documents: admission letter, two passport-size photographs, and a parent or guardian declaration form.",
+            "verification": {
+              "status": "exact",
+              "start": 517,
+              "end": 628
+            }
+          },
+          {
+            "claimId": "s2-k3",
+            "sourceId": "s2",
+            "claim": "An admission letter and a medical fitness certificate are required on the day of allotment.",
+            "quote": "You need your admission letter and a medical fitness certificate on the day of allotment.",
+            "verification": {
+              "status": "exact",
+              "start": 328,
+              "end": 417
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      },
+      {
+        "id": "b3",
+        "type": "outdated",
+        "checklistId": "c5",
+        "severity": "low",
+        "description": "Claim s3-k1 states fees and payment deadlines for the 2025-26 academic year, which is superseded by 2026-27 hostel announcements.",
+        "evidence": [
+          {
+            "claimId": "s3-k1",
+            "sourceId": "s3",
+            "claim": "Hostel fee for the academic year 2025-26 is Rs. 61,000 including mess charges, payable in a single instalment before 10 August 2025.",
+            "quote": "Hostel fee for the academic year 2025-26 is Rs. 61,000 including mess charges, payable in a single instalment before 10 August 2025.",
+            "verification": {
+              "status": "exact",
+              "start": 177,
+              "end": 309
+            }
+          }
+        ],
+        "label": "ai_inferred"
+      }
+    ],
+    "missedMoves": [
+      {
+        "id": "m1",
+        "checklistId": "c2",
+        "kind": "unanswered",
+        "importance": "high",
+        "description": "Reviewed claims state total fee figures but do not provide an itemized breakdown of deposits, utilities, or mess charges.",
+        "whyItMatters": "Students cannot confirm whether additional fees will be billed separately.",
+        "scope": "Mentioned, but not fully established in the 3 reviewed sources.",
+        "label": "unknown"
+      },
+      {
+        "id": "m2",
+        "checklistId": "c3",
+        "kind": "missing",
+        "importance": "high",
+        "description": "No reviewed source provides details on official payment methods, payment portal URLs, or bank account information.",
+        "whyItMatters": "Making payments to unverified accounts creates a risk of financial loss or invalidated booking.",
+        "scope": "Not found in the 3 reviewed sources.",
+        "label": "unknown"
+      },
+      {
+        "id": "m3",
+        "checklistId": "c5",
+        "kind": "unanswered",
+        "importance": "high",
+        "description": "Reviewed sources list instalment dates but do not state the refund or cancellation policy.",
+        "whyItMatters": "Students risk losing paid amounts if they withdraw or cancel their hostel registration.",
+        "scope": "Mentioned, but not fully established in the 3 reviewed sources.",
+        "label": "unknown"
+      }
+    ],
+    "hangingPieces": [
+      {
+        "id": "h1",
+        "checklistId": "c3",
+        "impact": "high",
+        "description": "Lack of official payment channels or bank details needed to safely execute hostel fee payment.",
+        "label": "unknown"
+      },
+      {
+        "id": "h2",
+        "checklistId": "c2",
+        "impact": "high",
+        "description": "Unresolved discrepancy between the official Rs. 68,000 fee figure and the student forum's Rs. 72,000 figure.",
+        "label": "ai_inferred"
+      },
+      {
+        "id": "h3",
+        "checklistId": "c4",
+        "impact": "medium",
+        "description": "Uncertainty regarding whether a medical fitness certificate is required for hostel room allotment.",
+        "label": "ai_inferred"
+      }
+    ],
+    "verifyNext": [
+      {
+        "priority": "high",
+        "action": "Obtain official payment portal details or bank account information from institute administration.",
+        "reason": "Ensures fee payments are made securely through verified channels to prevent loss or fraud.",
+        "whereToVerify": "Northfield Institute official hostel portal or finance department",
+        "relatedChecklistId": "c3",
+        "label": "ai_inferred",
+        "id": "v1",
+        "rank": 1,
+        "triggers": [
+          "m2",
+          "h1"
+        ]
+      },
+      {
+        "priority": "high",
+        "action": "Clarify the total fee breakdown and resolve the difference between Rs. 68,000 and Rs. 72,000.",
+        "reason": "Determines exact costs payable for 2026-27 including mess charges and deposits.",
+        "whereToVerify": "Chief Warden office or official hostel allotment desk",
+        "relatedChecklistId": "c2",
+        "label": "ai_inferred",
+        "id": "v2",
+        "rank": 2,
+        "triggers": [
+          "b1",
+          "m1",
+          "h2"
+        ]
+      },
+      {
+        "priority": "medium",
+        "action": "Confirm the complete list of required documents for allotment day.",
+        "reason": "Avoids allotment delays due to missing items such as medical fitness certificates.",
+        "whereToVerify": "Official hostel allotment page or administration notices",
+        "relatedChecklistId": "c4",
+        "label": "ai_inferred",
+        "id": "v3",
+        "rank": 3,
+        "triggers": [
+          "b2",
+          "h3"
+        ]
+      },
+      {
+        "priority": "medium",
+        "action": "Obtain written clarification on the refund and cancellation policy.",
+        "reason": "Protects against financial loss if hostel plans change after initial payment.",
+        "whereToVerify": "Northfield Institute official student handbook or hostel rules document",
+        "relatedChecklistId": "c5",
+        "label": "ai_inferred",
+        "id": "v4",
+        "rank": 4,
+        "triggers": [
+          "b3",
+          "m3"
+        ]
+      }
+    ],
+    "score": {
+      "value": 0.6,
+      "coverage": 0.614,
+      "version": "v1",
+      "factors": [
+        {
+          "key": "coverage",
+          "label": "Importance-weighted coverage",
+          "delta": 1.1,
+          "detail": "61% of weighted checklist items are established by verified quotations (conflicted items count half, unanswered items 40%)."
+        },
+        {
+          "key": "staleness",
+          "label": "Possibly outdated information",
+          "delta": -0.5,
+          "detail": "1 outdated-information warning(s), each backed by a visible date or cycle."
+        }
+      ],
+      "capApplied": null
+    },
+    "warnings": [],
+    "scopeNote": "Reviewed 3 sources: Northfield Institute: hostel allotment page; Northfield Students Forum: hostel FAQ; Northfield Institute: Student Handbook 2025-26 (PDF).",
+    "disclaimer": "Based on reviewed sources only. Absence in these sources does not mean absence in reality."
+  }
+}
