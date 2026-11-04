@@ -189,4 +189,3 @@ Blunder Check includes 3 instant test scenarios with planted real-world failure 
 ## 👥 Author
 
 Built solo by **Divyanshu Raj** for the **Shinchan Online Hackathon 2026**.  
-*All rights reserved.*
